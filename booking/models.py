@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from reversion import revisions as reversion
 
 class Room(models.Model):
     name = models.CharField(
@@ -12,8 +13,9 @@ class Room(models.Model):
         verbose_name=_('comment'),
     )
     manager = models.ForeignKey(
-        'User',
+        User,
         verbose_name=_('manager'),
+        on_delete=models.PROTECT,
     )
 
     class Meta:
@@ -33,11 +35,11 @@ class Reservation(models.Model):
         verbose_name=_('end_time'),
     )
     room = models.ForeignKey(
-        'Room',
+        Room,
         verbose_name=_('room'),
         on_delete=models.PROTECT,
     )
-    number_participants = models.IntegerFields(
+    number_participants = models.IntegerField(
         verbose_name=_('number of participants'),    
     )
     validation = models.BooleanField(
@@ -46,15 +48,14 @@ class Reservation(models.Model):
     )
     purpose_title = models.CharField(
         verbose_name=_('title'),
-        max_length=255),
+        max_length=255,
     )
     purpose_body = models.TextField(
         verbose_name=_('purpose'),
     )
     in_charges = models.ManyToManyField(
-        'User',
+        User,
         verbose_name=_('in charge'),
-        verbose_name_plural=_('in charges'),
     )
 
     class Meta:
