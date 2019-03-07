@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.swp
+.\#*
+*\#
+
+# Translations
+*.mo
+*.pot
+
+# Django Stuff
+db.sqlite3
+*.log
+
+
+
