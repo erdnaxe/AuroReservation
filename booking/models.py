@@ -12,10 +12,9 @@ class Room(models.Model):
     comment = models.TextField(
         verbose_name=_('comment'),
     )
-    manager = models.ForeignKey(
+    managers = models.ManyToManyField(
         User,
-        verbose_name=_('manager'),
-        on_delete=models.PROTECT,
+        verbose_name=_('managers'),
     )
 
     class Meta:
@@ -29,10 +28,10 @@ class Room(models.Model):
 
 class Reservation(models.Model):
     start_time = models.DateTimeField(
-        verbose_name=_('start_time'),
+        verbose_name=_('start time'),
     )
     end_time = models.DateTimeField(
-        verbose_name=_('end_time'),
+        verbose_name=_('end time'),
     )
     room = models.ForeignKey(
         Room,
@@ -40,7 +39,7 @@ class Reservation(models.Model):
         on_delete=models.PROTECT,
     )
     number_participants = models.IntegerField(
-        verbose_name=_('number of participants'),    
+        verbose_name=_('number of participants'),
     )
     validation = models.BooleanField(
         verbose_name=_('validation'),
@@ -53,9 +52,10 @@ class Reservation(models.Model):
     purpose_body = models.TextField(
         verbose_name=_('purpose'),
     )
-    in_charges = models.ManyToManyField(
+    in_charge = models.ForeignKey(
         User,
         verbose_name=_('in charge'),
+        on_delete=models.PROTECT,
     )
 
     class Meta:
@@ -64,5 +64,5 @@ class Reservation(models.Model):
         verbose_name_plural = _('reservations')
 
     def __str__(self):
-        return str(start_time) + " -> " + str(end_time) + " : " + purpose_title
+        return str(self.start_time) + " -> " + str(self.end_time) + " : " + self.purpose_title
 

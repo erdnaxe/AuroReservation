@@ -3,6 +3,7 @@ __pycache__/
 *.swp
 .\#*
 *\#
+static_files/
 
 # Translations
 *.mo
