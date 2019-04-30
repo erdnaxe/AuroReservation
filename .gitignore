@@ -3,6 +3,8 @@ __pycache__/
 *.swp
 .\#*
 *\#
+
+# Copied static files
 static_files/
 
 # Translations
@@ -13,5 +15,5 @@ static_files/
 db.sqlite3
 *.log
 
-
-
+# IDE specific
+.idea

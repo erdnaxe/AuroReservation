@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from reversion import revisions as reversion
 
 class Room(models.Model):
     name = models.CharField(
@@ -64,5 +63,5 @@ class Reservation(models.Model):
         verbose_name_plural = _('reservations')
 
     def __str__(self):
-        return str(self.start_time) + " -> " + str(self.end_time) + " : " + self.purpose_title
-
+        return str(self.start_time) + " -> " + str(
+            self.end_time) + " : " + self.purpose_title
