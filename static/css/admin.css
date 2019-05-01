@@ -48,53 +48,27 @@ input[type=button]:focus, .button:hover, input[type=submit]:hover, input[type=bu
     background: #a7752b;
 }
 
-/* Image in branding */
-img.banding-logo {
-    margin-top: -3px;
-    height: 32px;
-}
-
-/* Navbar menu */
-#nav {
-    padding: 0;
-    margin: 0 0 0 20px;
-    font-weight: 300;
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    text-align: left;
-}
-
-#nav a {
-    border-bottom: none;
-    font-weight: bold;
-    display: inline-block;
-}
-
-#nav div.dropdown:hover > a, #nav div.dropdown:focus > a {
-    text-decoration: none;
+/* User tools top menu */
+#user-tools .dropdown:hover > a, #user-tools .dropdown:focus > a {
     color: #79aec8;
 }
 
-#nav a.activated {
-    text-decoration: underline;
-}
-
-#nav div.dropdown {
+#user-tools .dropdown {
     position: relative; /* needed to position the dropdown content */
     display: inline-block;
 }
 
-#nav div.dropdown-content {
-    display: none;
+#user-tools .dropdown-content {
+    display: none; /* hidden by default */
     position: absolute;
     background-color: #444444;
-    min-width: 220px;
+    min-width: 180px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 100;
+    text-align: left;
 }
 
-#nav div.dropdown-content a {
+#user-tools .dropdown-content a {
     color: #fff;
     padding: 7px 8px;
     text-decoration: none;
@@ -102,11 +76,11 @@ img.banding-logo {
     line-height: 16px;
 }
 
-#nav div.dropdown-content a:hover {
+#user-tools div.dropdown-content a:hover {
     background-color: #636363;
 }
 
-#nav div.dropdown:hover .dropdown-content {
+#user-tools .dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -127,6 +101,7 @@ img.banding-logo {
 
 .login #footer {
     padding: 10px;
+    font-size: 10pt;
 }
 
 #footer a {
@@ -149,7 +124,8 @@ img.banding-logo {
 
 /* Recenter login button */
 .login .submit-row {
-    padding: 1em 0 0 8.5em !important;
+    padding: 1em 0 0 0 !important;
+    text-align: center !important;
 }
 
 /* Dashboard should take all page */
