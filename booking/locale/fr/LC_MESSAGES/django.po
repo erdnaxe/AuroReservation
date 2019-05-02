@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-30 16:00+0000\n"
+"POT-Creation-Date: 2019-05-02 08:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,62 +18,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: booking/apps.py:6
+#: booking/apps.py:7
 msgid "booking"
 msgstr "réservation"
 
-#: booking/models.py:9
+#: booking/models.py:8
 msgid "name"
 msgstr "nom"
 
-#: booking/models.py:13
+#: booking/models.py:12
 msgid "comment"
 msgstr "commentaire"
 
-#: booking/models.py:17
+#: booking/models.py:16
 msgid "managers"
 msgstr "gestionnaire"
 
-#: booking/models.py:22 booking/models.py:38
+#: booking/models.py:21 booking/models.py:37
 msgid "room"
 msgstr "salle"
 
-#: booking/models.py:23
+#: booking/models.py:22
 msgid "rooms"
 msgstr "salles"
 
-#: booking/models.py:31
+#: booking/models.py:30
 msgid "start time"
 msgstr "heure de début"
 
-#: booking/models.py:34
+#: booking/models.py:33
 msgid "end time"
 msgstr "heure de fin"
 
-#: booking/models.py:42
+#: booking/models.py:41
 msgid "number of participants"
 msgstr "nombre de paticipants"
 
-#: booking/models.py:45
+#: booking/models.py:44
 msgid "validation"
 msgstr "validation"
 
-#: booking/models.py:49
+#: booking/models.py:48
 msgid "title"
 msgstr "titre"
 
-#: booking/models.py:53
+#: booking/models.py:52
 msgid "purpose"
 msgstr "raison"
 
-#: booking/models.py:57
+#: booking/models.py:56
 msgid "in charge"
 msgstr "en charge"
 
-#: booking/models.py:63
+#: booking/models.py:62
 msgid "reservation"
 msgstr "réservation"
 
-#: booking/models.py:64
+#: booking/models.py:63
 msgid "reservations"
 msgstr "réservations"

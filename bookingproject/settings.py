@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'reversion',
     'booking.apps.BookingConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
