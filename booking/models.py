@@ -23,6 +23,8 @@ class Room(models.Model):
         max_length=255,
     )
     comment = models.TextField(
+        blank=True,
+        null=True,
         verbose_name=_('comment'),
     )
     managers = models.ManyToManyField(
@@ -31,6 +33,7 @@ class Room(models.Model):
     )
     tags = models.ManyToManyField(
         Tag,
+        blank=True,
         verbose_name=_('tags'),
     )
 
