@@ -7,10 +7,11 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Profile(models.Model):
-    """An user profile
+    """
+    An user profile
 
     We do not want to patch the Django Contrib Auth User class
-    so this model add an user profile with additional information
+    so this model add an user profile with additional information.
     """
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL,
