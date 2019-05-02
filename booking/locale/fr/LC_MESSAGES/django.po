@@ -107,3 +107,11 @@ msgstr "réservations"
 #: booking/views.py:7
 msgid "Home"
 msgstr "Accueil"
+
+#: booking/admin.py:31
+msgid "Reservation must end after it begins."
+msgstr "La réservation doit se terminer après avoir commencé."
+
+#: booking/models.py:35
+msgid "There is already a reservation at this time."
+msgstr "Il y a déjà une réservation sur ce créneau."
