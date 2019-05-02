@@ -23,6 +23,9 @@ SPDX-License-Identifier: GPL-2.0-or-later
                 <strong>{% firstof user.get_short_name user.get_username %}</strong>.
             {% endblock %}
             {% block userlinks %}
+                {% if site_url %}
+                    <a href="{{ site_url }}">{% trans 'View site' %}</a> /
+                {% endif %}
                 {% if available_apps %}
                     {% for app in available_apps %}
                         <span class="dropdown">
