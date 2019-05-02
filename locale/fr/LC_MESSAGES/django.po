@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-02 08:04+0000\n"
+"POT-Creation-Date: 2019-05-02 19:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: bookingproject/settings.py:114
+#: bookingproject/settings.py:116
 msgid "English"
 msgstr "Anglais"
 
-#: bookingproject/settings.py:115
+#: bookingproject/settings.py:117
 msgid "French"
 msgstr "Français"
 

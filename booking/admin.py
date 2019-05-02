@@ -2,13 +2,19 @@
 from django.contrib import admin
 from reversion.admin import VersionAdmin
 
-from .models import Room, Reservation
+from .models import Room, Tag, Reservation
 
 
 @admin.register(Room)
 class RoomAdmin(VersionAdmin, admin.ModelAdmin):
-    list_display = ('name', 'comment')
-    list_filter = ('managers',)
+    list_display = ('name', 'comment',)
+    list_filter = ('tags', 'managers',)
+    search_fields = ('name',)
+
+
+@admin.register(Tag)
+class TagAdmin(VersionAdmin, admin.ModelAdmin):
+    list_display = ('name',)
     search_fields = ('name',)
 
 
@@ -22,7 +28,7 @@ class ReservationAdmin(VersionAdmin, admin.ModelAdmin):
         'end_time',
         'number_participants',
     )
-    list_filter = ('start_time', 'end_time', 'room', 'validation')
+    list_filter = ('start_time', 'end_time', 'room', 'validation',)
 
     def has_ownership(self, user, instance):
         return user == instance.in_charge or (user in instance.room.managers)
