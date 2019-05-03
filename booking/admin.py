@@ -9,7 +9,8 @@ from .models import Room, Tag, Reservation
 class RoomAdmin(VersionAdmin, admin.ModelAdmin):
     list_display = ('name', 'comment',)
     list_filter = ('tags', 'managers',)
-    search_fields = ('name',)
+    search_fields = ('name', 'tags__name',)
+    autocomplete_fields = ('tags', 'managers')
 
 
 @admin.register(Tag)
@@ -29,6 +30,8 @@ class ReservationAdmin(VersionAdmin, admin.ModelAdmin):
         'number_participants',
     )
     list_filter = ('start_time', 'end_time', 'room', 'validation',)
+    search_fields = ('in_charge__username', 'room__name',)
+    autocomplete_fields = ('in_charge', 'room',)
 
     def has_ownership(self, user, instance):
         return user == instance.in_charge or (user in instance.room.managers)
