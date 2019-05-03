@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-03 15:35+0000\n"
+"POT-Creation-Date: 2019-05-03 15:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,3 +103,7 @@ msgstr "réservation"
 #: booking/models.py:89
 msgid "reservations"
 msgstr "réservations"
+
+#: booking/views.py:7
+msgid "Home"
+msgstr "Accueil"

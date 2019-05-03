@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-03 15:35+0000\n"
+"POT-Creation-Date: 2019-05-03 15:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,23 +26,23 @@ msgstr "Anglais"
 msgid "French"
 msgstr "Français"
 
-#: templates/admin/base_site.html:22
+#: templates/admin/base_site.html:22 templates/base.html:14
 msgid "Welcome,"
 msgstr ""
 
 #: templates/admin/base_site.html:27
 msgid "View site"
-msgstr ""
+msgstr "Retour au site"
 
 #: templates/admin/base_site.html:46
 msgid "Documentation"
 msgstr ""
 
-#: templates/admin/base_site.html:50
+#: templates/admin/base_site.html:50 templates/base.html:22
 msgid "Change password"
 msgstr ""
 
-#: templates/admin/base_site.html:52
+#: templates/admin/base_site.html:52 templates/base.html:24
 msgid "Log out"
 msgstr ""
 
@@ -53,3 +53,7 @@ msgid ""
 msgstr ""
 "Ce logiciel est sous les termes de la licence <a href=\"http://www.gnu.org/"
 "licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a>."
+
+#: templates/base.html:19
+msgid "View admin"
+msgstr "Administration"

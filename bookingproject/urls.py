@@ -17,6 +17,7 @@ from django.urls import path, include
 from django.contrib import admin
 
 urlpatterns = [
+    path('', include('booking.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),

@@ -1,0 +1,27 @@
+{% extends "admin/base_site.html" %}
+{% comment %}
+SPDX-License-Identifier: GPL-2.0-or-later
+{% endcomment %}
+
+{% load i18n staticfiles %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block usertools %}
+    <div id="user-tools">
+        {% block welcome-msg %}
+            {% trans 'Welcome,' %}
+            <strong>{% firstof user.get_short_name user.get_username %}</strong>.
+        {% endblock %}
+        {% block userlinks %}
+            {% if user.is_staff %}
+                <a href="{% url 'admin:index' %}">{% trans 'View admin' %}</a> /
+            {% endif %}
+            {% if user.has_usable_password %}
+                <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> /
+            {% endif %}
+            <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+        {% endblock %}
+    </div>
+{% endblock %}
