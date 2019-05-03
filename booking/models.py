@@ -26,10 +26,13 @@ class Room(models.Model):
         blank=True,
         null=True,
         verbose_name=_('comment'),
+        help_text=_('Describe what is special about this room, '
+                    'such as available equipment.'),
     )
     managers = models.ManyToManyField(
         User,
         verbose_name=_('managers'),
+        help_text=_('Will manage booking for this room.'),
     )
     tags = models.ManyToManyField(
         Tag,
@@ -60,6 +63,7 @@ class Reservation(models.Model):
     )
     number_participants = models.IntegerField(
         verbose_name=_('number of participants'),
+        help_text=_('Approximate if unknown.'),
     )
     validation = models.BooleanField(
         verbose_name=_('validation'),
@@ -71,6 +75,7 @@ class Reservation(models.Model):
     )
     purpose_body = models.TextField(
         verbose_name=_('purpose'),
+        help_text=_('Specify here if it is for a club.'),
     )
     in_charge = models.ForeignKey(
         User,
