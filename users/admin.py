@@ -3,6 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 
+from .forms import CustomUserChangeForm
 from .models import Profile
 
 
@@ -18,6 +19,7 @@ class CustomUserAdmin(UserAdmin):
         'username', 'email', 'get_phone_number', 'first_name', 'last_name',
         'is_staff')
     list_select_related = ('profile',)
+    form = CustomUserChangeForm
 
     def get_phone_number(self, instance):
         return instance.profile.phone_number
