@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django_extensions',
     'reversion',
+    'rest_framework',
     'booking.apps.BookingConfig',
     'users.apps.UsersConfig',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +138,10 @@ STATIC_URL = '/static/'
 
 # Django main site
 SITE_ID = 1
+
+# Django Rest Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.'
+                                'PageNumberPagination',
+    'PAGE_SIZE': 10
+}

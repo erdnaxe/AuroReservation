@@ -9,6 +9,7 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('', include('booking.urls')),
+    path('api/', include('api.urls')),
 
     # Include Django Contrib and Core routers
     # admin/login/ is redirected to the non-admin login page
