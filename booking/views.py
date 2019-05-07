@@ -10,3 +10,12 @@ def index(request):
     }
 
     return render(request, 'booking/index.html', context=context)
+
+
+@login_required
+def profile(request):
+    context = {
+        'title': _('My profile'),
+    }
+
+    return render(request, 'booking/profile.html', context=context)

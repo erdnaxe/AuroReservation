@@ -3,9 +3,13 @@
 SPDX-License-Identifier: GPL-2.0-or-later
 {% endcomment %}
 
-{% load i18n staticfiles %}
+{% load i18n %}
 
 {% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="{% url 'index' %}">{% trans 'Home' %}</a>
+        {% if title %} &rsaquo; {{ title }}{% endif %}
+    </div>
 {% endblock %}
 
 {% block usertools %}
@@ -18,9 +22,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
             {% if user.is_staff %}
                 <a href="{% url 'admin:index' %}">{% trans 'View admin' %}</a> /
             {% endif %}
-            {% if user.has_usable_password %}
-                <a href="{% url 'password_change' %}">{% trans 'Change password' %}</a> /
-            {% endif %}
+            <a href="{% url 'profile' %}">{% trans 'My profile' %}</a> /
             <a href="{% url 'logout' %}">{% trans 'Log out' %}</a>
         {% endblock %}
     </div>

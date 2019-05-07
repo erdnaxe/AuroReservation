@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-07 09:43+0000\n"
+"POT-Creation-Date: 2019-05-07 09:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,6 +104,14 @@ msgstr "réservation"
 msgid "reservations"
 msgstr "réservations"
 
+#: booking/templates/booking/profile.html:12
+msgid "Change password"
+msgstr ""
+
 #: booking/views.py:9
 msgid "Home"
 msgstr "Accueil"
+
+#: booking/views.py:18
+msgid "My profile"
+msgstr "Mon profil"
