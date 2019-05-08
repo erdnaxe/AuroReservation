@@ -4,11 +4,7 @@ from reversion.admin import VersionAdmin
 
 from .models import Room, Tag, Reservation
 
-from django import forms
-from django.utils.translation import gettext_lazy as _
-
-from django import forms
-from django.utils.translation import gettext_lazy as _
+from .forms import ReservationAdminForm
 
 
 @admin.register(Room)
@@ -24,33 +20,9 @@ class TagAdmin(VersionAdmin, admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
 
-class ReservationForm(forms.ModelForm):
-    class Meta:
-        model = Reservation
-        exclude = ()
-
-    def clean(self):
-        form_data = self.cleaned_data
-
-        validation = form_data['validation']
-
-        if validation:
-
-            start_time = form_data['start_time']
-            end_time = form_data['end_time']
-            if start_time > end_time:
-                raise forms.ValidationError(_("Reservation must end after it begins."))
-
-            reservation_list = form_data['room'].reservation_set.filter(validation=True, start_time__lt=end_time, end_time__gt=start_time).exclude(pk=self.instance.pk)
-            if reservation_list.exists():
-                raise forms.ValidationError(_("There is already a reservation at this time."))
-
-        return form_data
-
-
 @admin.register(Reservation)
 class ReservationAdmin(VersionAdmin, admin.ModelAdmin):
-    form = ReservationForm
+    form = ReservationAdminForm
     list_display = (
         'purpose_title',
         'validation',
