@@ -2,19 +2,25 @@
 from django.contrib import admin
 from reversion.admin import VersionAdmin
 
-from .models import Room, Tag, Reservation
+from .models import Room, Tag, Reservation, Building
 
 
 @admin.register(Room)
 class RoomAdmin(VersionAdmin, admin.ModelAdmin):
-    list_display = ('name', 'comment',)
-    list_filter = ('tags', 'managers',)
-    search_fields = ('name', 'tags__name',)
-    autocomplete_fields = ('tags', 'managers')
+    list_display = ('name', 'building', 'comment',)
+    list_filter = ('building', 'tags', 'managers',)
+    search_fields = ('name', 'building__name', 'tags__name',)
+    autocomplete_fields = ('building', 'tags', 'managers')
 
 
 @admin.register(Tag)
 class TagAdmin(VersionAdmin, admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
+
+@admin.register(Building)
+class BuildingAdmin(VersionAdmin, admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
 

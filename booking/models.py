@@ -17,6 +17,20 @@ class Tag(models.Model):
         return self.name
 
 
+class Building(models.Model):
+    name = models.CharField(
+        verbose_name=_('name'),
+        max_length=255,
+    )
+
+    class Meta:
+        verbose_name = _('building')
+        verbose_name_plural = _('buildings')
+
+    def __str__(self):
+        return self.name
+
+
 class Room(models.Model):
     name = models.CharField(
         verbose_name=_('name'),
@@ -38,6 +52,13 @@ class Room(models.Model):
         Tag,
         blank=True,
         verbose_name=_('tags'),
+    )
+    building = models.ForeignKey(
+        Building,
+        blank=True,
+        null=True,
+        on_delete=models.CASCADE,
+        verbose_name=_('building'),
     )
 
     class Meta:
