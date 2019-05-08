@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         defaultView: 'resourceTimelineDay',
         editable: false,
         resourceLabelText: 'Rooms',
+        nowIndicator: true,
         header: {
             left: 'prev,next',
             center: 'title',
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         resources: 'fc/resources.json',
         events: 'fc/events.json',
         resourceRender: function (renderInfo) {
+            // Question mark for room comment
             const questionMark = document.createElement('strong');
             questionMark.innerText = ' (?) ';
             renderInfo.el.querySelector('.fc-cell-text').appendChild(questionMark);
@@ -36,6 +38,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 placement: 'right',
                 arrow: true,
             });
+
+            // Button to add a reservation
+            const addButton = document.createElement('a');
+            addButton.innerText = 'Ajouter une réservation';
+            addButton.href = renderInfo.resource.extendedProps.add_url;
+            renderInfo.el.querySelector('.fc-cell-text').appendChild(addButton);
         }
     });
 

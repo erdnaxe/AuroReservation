@@ -2,8 +2,9 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
+from django.http import JsonResponse, Http404
 from django.shortcuts import render
+from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from rest_framework import viewsets
 from rest_framework.permissions import DjangoModelPermissions
@@ -22,6 +23,23 @@ def index(request):
     }
 
     return render(request, 'booking/index.html', context=context)
+
+
+@login_required
+def add(request, room_id):
+    """
+    Reservation create view
+    """
+    try:
+        room = Room.objects.get(pk=room_id)
+    except Room.DoesNotExist:
+        raise Http404("Room does not exist")
+
+    context = {
+        'title': _('Create a reservation for ') + room.name,
+    }
+
+    return render(request, 'booking/add.html', context=context)
 
 
 @login_required
@@ -45,7 +63,8 @@ def fc_resources(request):
     data = [{
         "id": r.id,
         "title": r.name,
-        "comment": r.comment
+        "comment": r.comment,
+        "add_url": reverse('add', args=(r.id,)),
     } for r in rooms]
     return JsonResponse(data, safe=False)
 

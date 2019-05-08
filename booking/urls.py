@@ -3,10 +3,11 @@
 
 from django.urls import path
 
-from .views import index, profile, fc_resources, fc_events
+from .views import index, add, profile, fc_resources, fc_events
 
 urlpatterns = [
     path('', index, name='index'),
+    path('reservation/<int:room_id>/add', add, name='add'),
     path('accounts/profile/', profile, name='profile'),
 
     # API endpoints for FullCalendar
