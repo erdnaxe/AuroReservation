@@ -9,7 +9,7 @@ from django.utils.translation import gettext_lazy as _
 from rest_framework import viewsets
 from rest_framework.permissions import DjangoModelPermissions
 
-from .models import Tag, Room, Reservation
+from .models import Tag, Building, Room, Reservation
 from .serializers import TagSerializer, RoomSerializer, ReservationSerializer
 
 
@@ -76,13 +76,23 @@ def fc_resources(request):
     """
     Returns resources in JSON for FullCalendar
     """
-    rooms = Room.objects.all()
+    buildings = Building.objects.all()
     data = [{
-        "id": r.id,
-        "title": r.name,
-        "comment": r.comment,
-        "add_url": reverse('add', args=(r.id,)),
-    } for r in rooms]
+        "id": f'b{b.id}',
+        "title": b.name,
+    } for b in buildings]
+
+    rooms = Room.objects.all()
+    for r in rooms:
+        resource = {
+            "id": r.id,
+            "title": r.name,
+            "comment": r.comment,
+            "add_url": reverse('add', args=(r.id,)),
+        }
+        if r.building:
+            resource["parentId"] = f'b{r.building.id}'
+        data.append(resource)
     return JsonResponse(data, safe=False)
 
 
@@ -97,8 +107,8 @@ def fc_events(request):
     end_time = request.GET.get('end')
     if start_time and end_time:
         queryset = Reservation.objects.filter(
-            start_time__gt=start_time,
-            end_time__lt=end_time,
+            start_time__lt=end_time,
+            end_time__gt=start_time,
             validation=True,
         )
     else:

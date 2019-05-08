@@ -21,33 +21,37 @@ document.addEventListener('DOMContentLoaded', function () {
         nowIndicator: true,
         slotDuration: '01:00:00',
         slotLabelInterval: '03:00:00',
+        resourceAreaWidth: "20%",
         header: {
-            left: 'prev,next',
+            left: '',
             center: 'title',
-            right: 'resourceTimelineDay,resourceTimelineWeek'
+            right: 'prev,next resourceTimelineDay,resourceTimelineWeek'
         },
         height: "auto",
         locales: [frLocale],
         resources: 'fc/resources.json',
         events: 'fc/events.json',
         resourceRender: function (renderInfo) {
-            // Question mark for room comment
             const cellText = renderInfo.el.querySelector('.fc-cell-text');
-            cellText.style.color = "#447e9b";
-            cellText.style.fontWeight = "bold";
 
             // Link to add a reservation
-            cellText.style.cursor = 'pointer';
-            cellText.addEventListener('click', function () {
-                window.location.href = renderInfo.resource.extendedProps.add_url;
-            });
+            if (renderInfo.resource.extendedProps.add_url) {
+                cellText.style.color = "#447e9b";
+                cellText.style.fontWeight = "bold";
+                cellText.style.cursor = 'pointer';
+                cellText.addEventListener('click', function () {
+                    window.location.href = renderInfo.resource.extendedProps.add_url;
+                });
+            }
 
             // Tooltip
-            new tippy(cellText, {
-                content: renderInfo.resource.extendedProps.comment,
-                placement: 'right',
-                arrow: true,
-            });
+            if (renderInfo.resource.extendedProps.comment) {
+                new tippy(cellText, {
+                    content: renderInfo.resource.extendedProps.comment,
+                    placement: 'right',
+                    arrow: true,
+                });
+            }
         }
     });
 
