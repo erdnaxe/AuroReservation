@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'reversion',
     'rest_framework',
+    'webpack_loader',
     'booking.apps.BookingConfig',
     'users.apps.UsersConfig',
     'api.apps.ApiConfig',
@@ -135,6 +136,14 @@ USE_TZ = True
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, "static_files")
 STATIC_URL = '/static/'
+
+# Webpack integration
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}
 
 # Django main site
 SITE_ID = 1

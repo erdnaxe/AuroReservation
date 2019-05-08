@@ -9,11 +9,13 @@ Ces versions correspondent au plus à celles dans Debian Buster.
 Pour mettre cet environnement en place, vérifiez que vous avez Pipenv sur votre machine, puis dans le dossier du projet :
 
 ```bash
+yarn install  # Installation des dépendances du frontend
 pipenv install  # Installation d'un virtualenv
 pipenv shell  # Rentre dans le virtualenv
 ./manage.py migrate  # Exécute les migrations de la base de données
 ./manage.py compilemessages  # Compile les traductions
 ./manage.py createsuperuser  # Crée un super-utilisateur
+yarn run build  # Build frontend
 ./manage.py runserver  # Lancer un serveur de développement
 ```
 
@@ -45,5 +47,5 @@ Les paquets nécessaires sont :
   * python3-django-reversion
   * python3-django-webpack-loader
   * python3-docutils
-  * webpack
+  * yarn
 
