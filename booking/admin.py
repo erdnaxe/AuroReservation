@@ -34,7 +34,7 @@ class ReservationAdmin(VersionAdmin, admin.ModelAdmin):
     autocomplete_fields = ('in_charge', 'room',)
 
     def has_ownership(self, user, instance):
-        return user == instance.in_charge or (user in instance.room.managers)
+        return user in instance.room.managers.all()
 
     def has_change_permission(self, request, obj=None):
         if obj is not None and self.has_ownership(request.user, obj):

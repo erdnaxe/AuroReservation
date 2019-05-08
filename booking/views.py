@@ -43,6 +43,23 @@ def add(request, room_id):
 
 
 @login_required
+def edit(request, reservation_id):
+    """
+    Reservation edit view
+    """
+    try:
+        reservation = Reservation.objects.get(pk=reservation_id)
+    except Reservation.DoesNotExist:
+        raise Http404("Room does not exist")
+
+    context = {
+        'title': _('Edit reservation ') + reservation.purpose_title,
+    }
+
+    return render(request, 'booking/edit.html', context=context)
+
+
+@login_required
 def profile(request):
     """
     User profile view
@@ -92,6 +109,7 @@ def fc_events(request):
         "title": reservation.purpose_title,
         "start": reservation.start_time,
         "end": reservation.end_time,
+        "url": reverse('edit', args=(reservation.id,)),
     } for reservation in queryset]
     return JsonResponse(data, safe=False)
 
