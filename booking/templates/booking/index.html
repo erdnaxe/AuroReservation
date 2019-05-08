@@ -2,9 +2,11 @@
 {% comment %}
 SPDX-License-Identifier: GPL-2.0-or-later
 {% endcomment %}
+{% load render_bundle from webpack_loader %}
 
 {% block breadcrumbs %}{% endblock %}
 
 {% block content %}
-    C'est le contenu !
+    <div id='calendar'></div>
+    {% render_bundle 'main' %}
 {% endblock %}
