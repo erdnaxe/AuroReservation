@@ -15,10 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
         schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
         plugins: [resourceTimelinePlugin],
         timeZone: 'UTC',
-        defaultView: 'resourceTimelineDay',
+        defaultView: 'resourceTimelineWeek',
         editable: false,
         resourceLabelText: 'Rooms',
         nowIndicator: true,
+        slotDuration: '01:00:00',
+        slotLabelInterval: '03:00:00',
         header: {
             left: 'prev,next',
             center: 'title',
@@ -30,20 +32,22 @@ document.addEventListener('DOMContentLoaded', function () {
         events: 'fc/events.json',
         resourceRender: function (renderInfo) {
             // Question mark for room comment
-            const questionMark = document.createElement('strong');
-            questionMark.innerText = ' (?) ';
-            renderInfo.el.querySelector('.fc-cell-text').appendChild(questionMark);
-            const tooltip = new tippy(questionMark, {
+            const cellText = renderInfo.el.querySelector('.fc-cell-text');
+            cellText.style.color = "#447e9b";
+            cellText.style.fontWeight = "bold";
+
+            // Link to add a reservation
+            cellText.style.cursor = 'pointer';
+            cellText.addEventListener('click', function () {
+                window.location.href = renderInfo.resource.extendedProps.add_url;
+            });
+
+            // Tooltip
+            new tippy(cellText, {
                 content: renderInfo.resource.extendedProps.comment,
                 placement: 'right',
                 arrow: true,
             });
-
-            // Button to add a reservation
-            const addButton = document.createElement('a');
-            addButton.innerText = 'Ajouter une réservation';
-            addButton.href = renderInfo.resource.extendedProps.add_url;
-            renderInfo.el.querySelector('.fc-cell-text').appendChild(addButton);
         }
     });
 
