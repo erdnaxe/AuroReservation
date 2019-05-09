@@ -50,8 +50,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
         },
-        eventRender: function (event) {
-            event.el.style.color = 'white'
+        eventRender: function (renderInfo) {
+            renderInfo.el.style.color = 'white';
+            const cellText = renderInfo.el.querySelector('.fc-content');
+
+            // Tooltip
+            if (renderInfo.event.extendedProps.comment) {
+                new tippy(renderInfo.el, {
+                    content: renderInfo.event.extendedProps.comment,
+                    placement: 'top',
+                    arrow: true,
+                });
+            }
         }
     });
 
@@ -62,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Scroll to now
     setTimeout(function () {
-        let today = document.getElementsByClassName('fc-now-indicator')[0];
+        let today = document.querySelector('.fc-now-indicator');
         let scroller = document.getElementsByClassName('fc-scroller')[1];
         scroller.scrollLeft = today.offsetLeft;
     }, 10);

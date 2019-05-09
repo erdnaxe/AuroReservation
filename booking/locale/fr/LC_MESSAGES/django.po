@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 14:06+0000\n"
+"POT-Creation-Date: 2019-05-09 16:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,6 +112,14 @@ msgstr "réservation"
 msgid "reservations"
 msgstr "réservations"
 
+#: booking/templates/booking/index.html:13
+msgid ""
+"To add a reservation, click on a room. To edit, click on a reservation you "
+"own."
+msgstr ""
+"Pour ajouter une réservation, cliquer sur une salle. Pour éditer, cliquer "
+"sur une réservation vous appartenant."
+
 #: booking/templates/booking/profile.html:12
 msgid "Change password"
 msgstr ""
@@ -124,10 +132,22 @@ msgstr "Accueil"
 msgid "Create a reservation for "
 msgstr "Créer une réservation pour le "
 
-#: booking/views.py:56
+#: booking/views.py:58
 msgid "Edit reservation "
 msgstr "Modifier la réservation "
 
-#: booking/views.py:68
+#: booking/views.py:70
 msgid "My profile"
 msgstr "Mon profil"
+
+#: booking/views.py:133
+msgid "Validated"
+msgstr "Validé"
+
+#: booking/views.py:136
+msgid "Being validated"
+msgstr "En cours de validation"
+
+#: booking/views.py:139
+msgid "Denied"
+msgstr "Refusé"
