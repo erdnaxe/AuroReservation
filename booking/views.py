@@ -87,16 +87,18 @@ def fc_resources(request):
 
     # Add all rooms (with comment and url)
     rooms = Room.objects.all()
-    for r in rooms:
+    for room in rooms:
         resource = {
-            "id": r.id,
-            "title": r.name,
-            "comment": r.comment,
-            "add_url": reverse('add', args=(r.id,)),
+            'id': room.id,
+            'title': room.name,
+            'add_url': reverse('add', args=(room.id,)),
         }
-        if r.building:
-            resource["parentId"] = f'b{r.building.id}'
+        if room.comment:
+            resource['comment'] = room.comment
+        if room.building:
+            resource['parentId'] = f'b{room.building.id}'
         data.append(resource)
+
     return JsonResponse(data, safe=False)
 
 

@@ -44,9 +44,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // Tooltip
             if (renderInfo.resource.extendedProps.comment) {
                 new tippy(cellText, {
-                    content: renderInfo.resource.extendedProps.comment,
+                    content: renderInfo.resource.extendedProps.comment.replace(/\n/g, "<br />"),
                     placement: 'right',
                     arrow: true,
+                    boundary: 'window',
                 });
             }
         },
