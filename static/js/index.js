@@ -10,22 +10,21 @@ import tippy from 'tippy.js'
 
 document.addEventListener('DOMContentLoaded', function () {
     let calendarEl = document.getElementById('calendar');
-
     let calendar = new Calendar(calendarEl, {
         schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
         plugins: [resourceTimelinePlugin],
-        timeZone: 'UTC',
+        timeZone: 'Europe/Paris',
         defaultView: 'resourceTimelineWeek',
         editable: false,
         resourceLabelText: 'Rooms',
         nowIndicator: true,
         slotDuration: '01:00:00',
-        slotLabelInterval: '03:00:00',
+        slotLabelInterval: '04:00:00',
         resourceAreaWidth: "20%",
         header: {
             left: '',
             center: 'title',
-            right: 'prev,next resourceTimelineDay,resourceTimelineWeek'
+            right: 'today prev,next resourceTimelineDay,resourceTimelineWeek'
         },
         height: "auto",
         locales: [frLocale],
@@ -52,11 +51,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     arrow: true,
                 });
             }
+        },
+        eventRender: function (event) {
+            event.el.style.color = 'white'
         }
     });
 
     calendar.render();
 
-    // TODO: switch locale with Django locale
-    calendar.setOption('locale', 'fr');
+    // Switch locale with Django locale
+    calendar.setOption('locale', document.documentElement.lang);
+
+    // Scroll to now
+    setTimeout(function () {
+        let today = document.getElementsByClassName('fc-now-indicator')[0];
+        let scroller = document.getElementsByClassName('fc-scroller')[1];
+        scroller.scrollLeft = today.offsetLeft;
+    }, 10);
 });
