@@ -15,10 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
         plugins: [resourceTimelinePlugin],
         timeZone: 'Europe/Paris',
         defaultView: 'resourceTimelineWeek',
-        editable: false,
-        resourceLabelText: 'Rooms',
+        resourceLabelText: '\ ',
         nowIndicator: true,
-        slotDuration: '01:00:00',
         slotLabelInterval: '04:00:00',
         resourceAreaWidth: "20%",
         header: {
