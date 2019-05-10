@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 16:19+0000\n"
+"POT-Creation-Date: 2019-05-10 13:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,13 +22,21 @@ msgstr ""
 msgid "booking"
 msgstr "réservation"
 
-#: booking/forms.py:20
+#: booking/forms.py:31
+msgid "There is already a reservation at this time."
+msgstr "Il y a déjà une réservation sur ce créneau."
+
+#: booking/forms.py:44
 msgid "Reservation must end after it begins."
 msgstr "La réservation doit se terminer après avoir commencé."
 
-#: booking/forms.py:29
-msgid "There is already a reservation at this time."
-msgstr "Il y a déjà une réservation sur ce créneau."
+#: booking/forms.py:52 booking/models.py:90
+msgid "validation"
+msgstr "validation"
+
+#: booking/forms.py:57 booking/models.py:103
+msgid "in charge"
+msgstr "en charge"
 
 #: booking/models.py:8 booking/models.py:22 booking/models.py:36
 msgid "name"
@@ -92,10 +100,6 @@ msgstr "nombre de paticipants"
 msgid "Approximate if unknown."
 msgstr "Approximatif si inconnu."
 
-#: booking/models.py:90
-msgid "validation"
-msgstr "validation"
-
 #: booking/models.py:94
 msgid "title"
 msgstr "titre"
@@ -107,10 +111,6 @@ msgstr "raison"
 #: booking/models.py:99
 msgid "Specify here if it is for a club."
 msgstr "Spécifier ici si c'est pour un club ou association."
-
-#: booking/models.py:103
-msgid "in charge"
-msgstr "en charge"
 
 #: booking/models.py:109
 msgid "reservation"
@@ -132,30 +132,34 @@ msgstr ""
 msgid "Change password"
 msgstr ""
 
-#: booking/views.py:22
+#: booking/templates/booking/reservation_form.html:11
+msgid "Save"
+msgstr ""
+
+#: booking/views.py:25
 msgid "Home"
 msgstr "Accueil"
 
-#: booking/views.py:39
+#: booking/views.py:42
 msgid "Create a reservation for "
 msgstr "Créer une réservation pour le "
 
 #: booking/views.py:58
-msgid "Edit reservation "
-msgstr "Modifier la réservation "
+msgid "Edit reservation"
+msgstr "Modifier la réservation"
 
-#: booking/views.py:70
+#: booking/views.py:81
 msgid "My profile"
 msgstr "Mon profil"
 
-#: booking/views.py:135
+#: booking/views.py:146
 msgid "Validated"
 msgstr "Validé"
 
-#: booking/views.py:138
+#: booking/views.py:149
 msgid "Being validated"
 msgstr "En cours de validation"
 
-#: booking/views.py:141
+#: booking/views.py:152
 msgid "Denied"
 msgstr "Refusé"

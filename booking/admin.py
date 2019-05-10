@@ -2,9 +2,8 @@
 from django.contrib import admin
 from reversion.admin import VersionAdmin
 
-from .models import Room, Tag, Reservation, Building
-
 from .forms import ReservationAdminForm
+from .models import Room, Tag, Reservation, Building
 
 
 @admin.register(Room)

@@ -3,7 +3,11 @@
 SPDX-License-Identifier: GPL-2.0-or-later
 {% endcomment %}
 {% load render_bundle from webpack_loader %}
+{% load i18n %}
 
 {% block content %}
-    Formulaire ici.
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="{% trans 'Save' %}">
+    </form>
 {% endblock %}

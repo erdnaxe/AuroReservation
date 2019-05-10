@@ -4,11 +4,14 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404
 from django.shortcuts import render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from django.utils.decorators import method_decorator
 from django.utils.translation import gettext_lazy as _
+from django.views.generic.edit import UpdateView
 from rest_framework import viewsets
 from rest_framework.permissions import DjangoModelPermissions
 
+from .forms import ReservationForm
 from .models import Tag, Building, Room, Reservation
 from .serializers import TagSerializer, RoomSerializer, ReservationSerializer
 
@@ -42,23 +45,31 @@ def add(request, room_id):
     return render(request, 'booking/add.html', context=context)
 
 
-@login_required
-def edit(request, reservation_id):
+class ReservationUpdate(UpdateView):
     """
-    Reservation edit view
+    View to edit a reservation
     """
-    try:
-        reservation = Reservation.objects.get(pk=reservation_id)
-    except Reservation.DoesNotExist:
-        raise Http404("Room does not exist")
+    model = Reservation
+    form_class = ReservationForm
+    success_url = reverse_lazy('index')
 
-    # TODO: check user own reservation
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = _('Edit reservation')
 
-    context = {
-        'title': _('Edit reservation ') + reservation.purpose_title,
-    }
+        # Check user own reservation
+        reservation = self.object
+        if not reservation.in_charge == self.request.user:
+            raise Http404
 
-    return render(request, 'booking/edit.html', context=context)
+        return context
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        """
+        Make sure user is logged in with decorator
+        """
+        return super().dispatch(request, *args, **kwargs)
 
 
 @login_required
