@@ -4,6 +4,8 @@ from reversion.admin import VersionAdmin
 
 from .models import Room, Tag, Reservation, Building
 
+from .forms import ReservationAdminForm
+
 
 @admin.register(Room)
 class RoomAdmin(VersionAdmin, admin.ModelAdmin):
@@ -27,6 +29,7 @@ class BuildingAdmin(VersionAdmin, admin.ModelAdmin):
 
 @admin.register(Reservation)
 class ReservationAdmin(VersionAdmin, admin.ModelAdmin):
+    form = ReservationAdminForm
     list_display = (
         'purpose_title',
         'validation',

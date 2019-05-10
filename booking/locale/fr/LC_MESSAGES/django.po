@@ -128,6 +128,14 @@ msgstr ""
 msgid "Home"
 msgstr "Accueil"
 
+#: booking/forms.py:20
+msgid "Reservation must end after it begins."
+msgstr "La réservation doit se terminer après avoir commencé."
+
+#: booking/forms.py:29
+msgid "There is already a reservation at this time."
+msgstr "Il y a déjà une réservation sur ce créneau."
+
 #: booking/views.py:39
 msgid "Create a reservation for "
 msgstr "Créer une réservation pour le "
