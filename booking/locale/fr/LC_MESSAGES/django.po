@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-03 15:56+0000\n"
+"POT-Creation-Date: 2019-05-09 16:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "booking"
 msgstr "réservation"
 
-#: booking/models.py:8 booking/models.py:22
+#: booking/models.py:8 booking/models.py:22 booking/models.py:36
 msgid "name"
 msgstr "nom"
 
@@ -30,81 +30,101 @@ msgstr "nom"
 msgid "tag"
 msgstr "étiquette"
 
-#: booking/models.py:14 booking/models.py:40
+#: booking/models.py:14 booking/models.py:54
 msgid "tags"
 msgstr "étiquettes"
 
+#: booking/models.py:27 booking/models.py:61
+msgid "building"
+msgstr "bâtiment"
+
 #: booking/models.py:28
+msgid "buildings"
+msgstr "bâtiments"
+
+#: booking/models.py:42
 msgid "comment"
 msgstr "commentaire"
 
-#: booking/models.py:29
+#: booking/models.py:43
 msgid "Describe what is special about this room, such as available equipment."
 msgstr ""
 "Indiquer ce qui est spécial dans cette pièce, par exemple l'équipement "
 "disponible."
 
-#: booking/models.py:34
+#: booking/models.py:48
 msgid "managers"
 msgstr "gestionnaires"
 
-#: booking/models.py:35
+#: booking/models.py:49
 msgid "Will manage booking for this room."
 msgstr "Gérera les réservations pour cette salle."
 
-#: booking/models.py:45 booking/models.py:61
+#: booking/models.py:66 booking/models.py:82
 msgid "room"
 msgstr "salle"
 
-#: booking/models.py:46
+#: booking/models.py:67
 msgid "rooms"
 msgstr "salles"
 
-#: booking/models.py:54
+#: booking/models.py:75
 msgid "start time"
 msgstr "heure de début"
 
-#: booking/models.py:57
+#: booking/models.py:78
 msgid "end time"
 msgstr "heure de fin"
 
-#: booking/models.py:65
+#: booking/models.py:86
 msgid "number of participants"
 msgstr "nombre de paticipants"
 
-#: booking/models.py:66
+#: booking/models.py:87
 msgid "Approximate if unknown."
 msgstr "Approximatif si inconnu."
 
-#: booking/models.py:69
+#: booking/models.py:90
 msgid "validation"
 msgstr "validation"
 
-#: booking/models.py:73
+#: booking/models.py:94
 msgid "title"
 msgstr "titre"
 
-#: booking/models.py:77
+#: booking/models.py:98
 msgid "purpose"
 msgstr "raison"
 
-#: booking/models.py:78
+#: booking/models.py:99
 msgid "Specify here if it is for a club."
 msgstr "Spécifier ici si c'est pour un club ou association."
 
-#: booking/models.py:82
+#: booking/models.py:103
 msgid "in charge"
 msgstr "en charge"
 
-#: booking/models.py:88
+#: booking/models.py:109
 msgid "reservation"
 msgstr "réservation"
 
-#: booking/models.py:89
+#: booking/models.py:110
 msgid "reservations"
 msgstr "réservations"
 
-#: booking/views.py:7
+#: booking/templates/booking/index.html:13
+msgid ""
+"To add a reservation, click on a room. To edit, click on a reservation you "
+"own."
+msgstr ""
+"Pour ajouter une réservation, cliquer sur une salle. Pour éditer, cliquer "
+"sur une réservation vous appartenant."
+
+#: booking/templates/booking/profile.html:12
+msgid "Change password"
+msgstr ""
+
+#: booking/views.py:22
 msgid "Home"
 msgstr "Accueil"
 
@@ -115,3 +135,27 @@ msgstr "La réservation doit se terminer après avoir commencé."
 #: booking/forms.py:29
 msgid "There is already a reservation at this time."
 msgstr "Il y a déjà une réservation sur ce créneau."
+
+#: booking/views.py:39
+msgid "Create a reservation for "
+msgstr "Créer une réservation pour le "
+
+#: booking/views.py:58
+msgid "Edit reservation "
+msgstr "Modifier la réservation "
+
+#: booking/views.py:70
+msgid "My profile"
+msgstr "Mon profil"
+
+#: booking/views.py:133
+msgid "Validated"
+msgstr "Validé"
+
+#: booking/views.py:136
+msgid "Being validated"
+msgstr "En cours de validation"
+
+#: booking/views.py:139
+msgid "Denied"
+msgstr "Refusé"

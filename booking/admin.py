@@ -2,23 +2,30 @@
 from django.contrib import admin
 from reversion.admin import VersionAdmin
 
-from .models import Room, Tag, Reservation
+from .models import Room, Tag, Reservation, Building
 
 from .forms import ReservationAdminForm
 
 
 @admin.register(Room)
 class RoomAdmin(VersionAdmin, admin.ModelAdmin):
-    list_display = ('name', 'comment',)
-    list_filter = ('tags', 'managers',)
-    search_fields = ('name', 'tags__name',)
-    autocomplete_fields = ('tags', 'managers')
+    list_display = ('name', 'building', 'comment',)
+    list_filter = ('building', 'tags', 'managers',)
+    search_fields = ('name', 'building__name', 'tags__name',)
+    autocomplete_fields = ('building', 'tags', 'managers')
 
 
 @admin.register(Tag)
 class TagAdmin(VersionAdmin, admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
+
+
+@admin.register(Building)
+class BuildingAdmin(VersionAdmin, admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
 
 @admin.register(Reservation)
 class ReservationAdmin(VersionAdmin, admin.ModelAdmin):
@@ -36,7 +43,7 @@ class ReservationAdmin(VersionAdmin, admin.ModelAdmin):
     autocomplete_fields = ('in_charge', 'room',)
 
     def has_ownership(self, user, instance):
-        return user == instance.in_charge or (user in instance.room.managers)
+        return user in instance.room.managers.all()
 
     def has_change_permission(self, request, obj=None):
         if obj is not None and self.has_ownership(request.user, obj):

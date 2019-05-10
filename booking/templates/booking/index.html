@@ -2,7 +2,15 @@
 {% comment %}
 SPDX-License-Identifier: GPL-2.0-or-later
 {% endcomment %}
+{% load render_bundle from webpack_loader %}
+{% load i18n %}
 
+{% block content_title %}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
 {% block content %}
-    C'est le contenu !
+    <div id='calendar'></div>
+    <p class="help">
+        {% trans 'To add a reservation, click on a room. To edit, click on a reservation you own.' %}
+    </p>
+    {% render_bundle 'main' %}
 {% endblock %}

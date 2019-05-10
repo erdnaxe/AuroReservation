@@ -41,8 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django_extensions',
     'reversion',
+    'rest_framework',
+    'webpack_loader',
     'booking.apps.BookingConfig',
     'users.apps.UsersConfig',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -134,5 +137,20 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, "static_files")
 STATIC_URL = '/static/'
 
+# Webpack integration
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}
+
 # Django main site
 SITE_ID = 1
+
+# Django Rest Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.'
+                                'PageNumberPagination',
+    'PAGE_SIZE': 10
+}
