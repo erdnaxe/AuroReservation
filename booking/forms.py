@@ -1,11 +1,13 @@
 from django import forms
-from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 
 from .models import Reservation
 
 
 class ReservationAdminForm(forms.ModelForm):
+    """
+    Reservation form in admin
+    """
     class Meta:
         model = Reservation
         exclude = ()
@@ -15,7 +17,7 @@ class ReservationAdminForm(forms.ModelForm):
         When validating, check that there is no reservation at that time
         """
         form_data = self.cleaned_data
-        validation = form_data['validation']
+        validation = form_data.get('validation')
         if validation:
             start_time = form_data['start_time']
             end_time = form_data['end_time']
@@ -48,16 +50,12 @@ class ReservationAdminForm(forms.ModelForm):
 
 
 class ReservationForm(ReservationAdminForm):
-    validation = forms.NullBooleanField(
-        label=_('validation'),
-        required=False,
-        disabled=True,
-    )
-    in_charge = forms.ModelChoiceField(
-        label=_('in charge'),
-        disabled=True,
-        queryset=User.objects.all(),
-    )
+    """
+    Reservation form in public site
+    """
+    class Meta:
+        model = Reservation
+        exclude = ('in_charge', 'validation')
 
-    # TODO: if already validated then unvalidated with a warning
+    # TODO: if already validated then warn
     # TODO: fix date

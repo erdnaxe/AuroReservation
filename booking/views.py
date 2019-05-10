@@ -2,12 +2,12 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse, Http404
 from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
-from django.utils.decorators import method_decorator
 from django.utils.translation import gettext_lazy as _
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import CreateView, UpdateView
 from rest_framework import viewsets
 from rest_framework.permissions import DjangoModelPermissions
 
@@ -28,24 +28,30 @@ def index(request):
     return render(request, 'booking/index.html', context=context)
 
 
-@login_required
-def add(request, room_id):
+class ReservationCreate(LoginRequiredMixin, CreateView):
     """
-    Reservation create view
+    View to create a reservation
     """
-    try:
-        room = Room.objects.get(pk=room_id)
-    except Room.DoesNotExist:
-        raise Http404("Room does not exist")
+    model = Reservation
+    form_class = ReservationForm
+    success_url = reverse_lazy('index')
 
-    context = {
-        'title': _('Create a reservation for ') + room.name,
-    }
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = _('Create reservation')
+        return context
 
-    return render(request, 'booking/add.html', context=context)
+    def form_valid(self, form):
+        """
+        Assign user and validation state
+        """
+        reservation = form.save(commit=False)
+        reservation.in_charge = self.request.user
+        reservation.validation = None
+        return super().form_valid(form)
 
 
-class ReservationUpdate(UpdateView):
+class ReservationUpdate(LoginRequiredMixin, UpdateView):
     """
     View to edit a reservation
     """
@@ -64,12 +70,14 @@ class ReservationUpdate(UpdateView):
 
         return context
 
-    @method_decorator(login_required)
-    def dispatch(self, request, *args, **kwargs):
+    def form_valid(self, form):
         """
-        Make sure user is logged in with decorator
+        Assign user and validation state
         """
-        return super().dispatch(request, *args, **kwargs)
+        reservation = form.save(commit=False)
+        reservation.in_charge = self.request.user
+        reservation.validation = None
+        return super().form_valid(form)
 
 
 @login_required
