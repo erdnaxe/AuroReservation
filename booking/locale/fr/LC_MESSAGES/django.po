@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 09:20+0000\n"
+"POT-Creation-Date: 2019-05-11 09:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,13 +22,21 @@ msgstr ""
 msgid "booking"
 msgstr "réservation"
 
-#: booking/forms.py:34
+#: booking/forms.py:39
 msgid "There is already a reservation at this time."
 msgstr "Il y a déjà une réservation sur ce créneau."
 
-#: booking/forms.py:47
+#: booking/forms.py:44
 msgid "Reservation must end after it begins."
 msgstr "La réservation doit se terminer après avoir commencé."
+
+#: booking/forms.py:51
+msgid "You can't make a reservation in the past."
+msgstr "Vous ne pouvez pas réserver dans le passé."
+
+#: booking/forms.py:67
+msgid "You already have to many future reservations."
+msgstr "Vous avez dépasser la limite de réservations."
 
 #: booking/models.py:8 booking/models.py:22 booking/models.py:36
 msgid "name"
