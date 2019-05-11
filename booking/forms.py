@@ -8,6 +8,7 @@ class ReservationAdminForm(forms.ModelForm):
     """
     Reservation form in admin
     """
+
     class Meta:
         model = Reservation
         exclude = ()
@@ -53,8 +54,7 @@ class ReservationForm(ReservationAdminForm):
     """
     Reservation form in public site
     """
+
     class Meta:
         model = Reservation
         exclude = ('in_charge', 'validation')
-
-    # TODO: if already validated then warn

@@ -1,6 +1,6 @@
 # -*- mode: python; coding: utf-8 -*-
 # SPDX-License-Identifier: GPL-2.0-or-later
-
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse, Http404
@@ -67,6 +67,12 @@ class ReservationUpdate(LoginRequiredMixin, UpdateView):
         reservation = self.object
         if not reservation.in_charge == self.request.user:
             raise Http404
+
+        # Warn user if the validation is already validated
+        if reservation.validation:
+            messages.add_message(self.request, messages.WARNING,
+                                 _('By editing this reservation, '
+                                   'it will be unvalidated!'))
 
         return context
 
