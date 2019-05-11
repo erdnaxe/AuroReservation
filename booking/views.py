@@ -28,6 +28,14 @@ def index(request):
     return render(request, 'booking/index.html', context=context)
 
 
+def about(request):
+    """
+    About view with legal information
+    """
+    context = {'title': _('About ') + request.site.name}
+    return render(request, 'booking/about.html', context=context)
+
+
 class ReservationCreate(LoginRequiredMixin, CreateView):
     """
     View to create a reservation

@@ -3,11 +3,12 @@
 
 from django.urls import path
 
-from .views import index, ReservationCreate, ReservationUpdate, profile, fc_resources, \
-    fc_events
+from .views import index, about, ReservationCreate, ReservationUpdate,\
+    profile, fc_resources, fc_events
 
 urlpatterns = [
     path('', index, name='index'),
+    path('about', about, name='about'),
     path('reservation/<room>/add', ReservationCreate.as_view(), name='add'),
     path('reservation/<int:pk>', ReservationUpdate.as_view(), name='edit'),
     path('accounts/profile/', profile, name='profile'),
