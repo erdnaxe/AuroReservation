@@ -5,10 +5,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView
 
+from .views import about
+
 """bookingproject URL Configuration"""
 
 urlpatterns = [
     path('', include('booking.urls')),
+    path('accounts/', include('users.urls')),
+    path('about/', about, name='about'),
     path('api/', include('api.urls')),
 
     # Include Django Contrib and Core routers

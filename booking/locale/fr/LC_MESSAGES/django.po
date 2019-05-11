@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 09:02+0000\n"
+"POT-Creation-Date: 2019-05-11 09:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -120,28 +120,6 @@ msgstr "réservation"
 msgid "reservations"
 msgstr "réservations"
 
-#: booking/templates/booking/about.html:9
-msgid ""
-"This software is under the terms of the <a href=\"http://www.gnu.org/"
-"licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a> License."
-msgstr ""
-"Ce logiciel est sous les termes de la licence <a href=\"http://www.gnu.org/"
-"licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a>."
-
-#: booking/templates/booking/about.html:15
-msgid ""
-"The favicon comes from the <a href=\"https://commons.wikimedia.org/wiki/File:"
-"Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-"
-"theme </a> and is licensed under the <a href=\"https://creativecommons.org/"
-"licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons "
-"Attribution-Share Alike 3.0 Unported </a> license."
-msgstr ""
-"La favicon a été extraite du <a href=\"https://commons.wikimedia.org/wiki/"
-"File:Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-"
-"icon-theme </a> et est sous licence <a href=\"https://creativecommons.org/"
-"licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons "
-"Attribution-Share Alike 3.0 Unported</a>."
-
 #: booking/templates/booking/index.html:13
 msgid ""
 "To add a reservation, click on a room. To edit, click on a reservation you "
@@ -150,46 +128,34 @@ msgstr ""
 "Pour ajouter une réservation, cliquer sur une salle. Pour éditer, cliquer "
 "sur une réservation vous appartenant."
 
-#: booking/templates/booking/profile.html:12
-msgid "Change password"
-msgstr ""
-
 #: booking/templates/booking/reservation_form.html:11
 msgid "Save"
 msgstr ""
 
-#: booking/views.py:25
+#: booking/views.py:24
 msgid "Home"
 msgstr "Accueil"
 
-#: booking/views.py:35
-msgid "About "
-msgstr "À propos de "
-
-#: booking/views.py:49
+#: booking/views.py:38
 msgid "Create reservation"
 msgstr "Créer une réservation"
 
-#: booking/views.py:72
+#: booking/views.py:61
 msgid "Edit reservation"
 msgstr "Modifier la réservation"
 
-#: booking/views.py:82
+#: booking/views.py:71
 msgid "By editing this reservation, it will be unvalidated!"
 msgstr "Si vous éditez cette réservation, elle sera dévalidée !"
 
-#: booking/views.py:103
-msgid "My profile"
-msgstr "Mon profil"
-
-#: booking/views.py:168
+#: booking/views.py:145
 msgid "Validated"
 msgstr "Validé"
 
-#: booking/views.py:171
+#: booking/views.py:148
 msgid "Being validated"
 msgstr "En cours de validation"
 
-#: booking/views.py:174
+#: booking/views.py:151
 msgid "Denied"
 msgstr "Refusé"

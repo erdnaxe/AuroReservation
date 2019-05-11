@@ -21,19 +21,8 @@ def index(request):
     """
     Index view with the calendar
     """
-    context = {
-        'title': _('Home'),
-    }
-
+    context = {'title': _('Home')}
     return render(request, 'booking/index.html', context=context)
-
-
-def about(request):
-    """
-    About view with legal information
-    """
-    context = {'title': _('About ') + request.site.name}
-    return render(request, 'booking/about.html', context=context)
 
 
 class ReservationCreate(LoginRequiredMixin, CreateView):
@@ -92,18 +81,6 @@ class ReservationUpdate(LoginRequiredMixin, UpdateView):
         reservation.in_charge = self.request.user
         reservation.validation = None
         return super().form_valid(form)
-
-
-@login_required
-def profile(request):
-    """
-    User profile view
-    """
-    context = {
-        'title': _('My profile'),
-    }
-
-    return render(request, 'booking/profile.html', context=context)
 
 
 @login_required

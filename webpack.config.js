@@ -3,12 +3,12 @@ const BundleTracker = require('webpack-bundle-tracker');
 
 module.exports = {
     mode: 'development',
-    entry: './static/js/index',
+    entry: './booking/static/js/index',
     resolve: {
         extensions: ['.js']
     },
     output: {
-        path: path.resolve('./static/bundles/'),
+        path: path.resolve('./booking/static/bundles/'),
         filename: "[name]-[hash].js",
     },
     plugins: [

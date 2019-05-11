@@ -20,5 +20,5 @@ db.sqlite3
 
 # Frontend
 node_modules
-static/bundles
+booking/static/bundles
 webpack-stats.json
