@@ -46,7 +46,7 @@ class ReservationAdminForm(forms.ModelForm):
                 _("Reservation must end after it begins.")
             )
 
-        return form_data['start_time']
+        return form_data['end_time']
 
 
 class ReservationForm(ReservationAdminForm):
@@ -58,4 +58,3 @@ class ReservationForm(ReservationAdminForm):
         exclude = ('in_charge', 'validation')
 
     # TODO: if already validated then warn
-    # TODO: fix date
