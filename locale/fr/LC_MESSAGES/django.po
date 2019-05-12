@@ -1,20 +1,11 @@
-# Booking project translation file.
-# Copyright (C) 2019
-# This file is distributed under the same license as the bookingproject package.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-12 04:55+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: BookingProject\n"
+"Language: fr\n"
 
 #: booking/apps.py:7
 msgid "booking"
@@ -62,9 +53,7 @@ msgstr "commentaire"
 
 #: booking/models.py:43
 msgid "Describe what is special about this room, such as available equipment."
-msgstr ""
-"Indiquer ce qui est spécial dans cette pièce, par exemple l'équipement "
-"disponible."
+msgstr "Indiquer ce qui est spécial dans cette pièce, par exemple l'équipement disponible."
 
 #: booking/models.py:48
 msgid "managers"
@@ -127,16 +116,12 @@ msgid "reservations"
 msgstr "réservations"
 
 #: booking/templates/booking/index.html:13
-msgid ""
-"To add a reservation, click on a room. To edit, click on a reservation you "
-"own."
-msgstr ""
-"Pour ajouter une réservation, cliquer sur une salle. Pour éditer, cliquer "
-"sur une réservation vous appartenant."
+msgid "To add a reservation, click on a room. To edit, click on a reservation you own."
+msgstr "Pour ajouter une réservation, cliquer sur une salle. Pour éditer, cliquer sur une réservation vous appartenant."
 
 #: booking/templates/booking/reservation_form.html:11
 msgid "Save"
-msgstr ""
+msgstr "Enregistrer"
 
 #: booking/views.py:24 templates/base.html:10
 #: templates/registration/logged_out.html:9
@@ -186,30 +171,16 @@ msgid "About "
 msgstr "À propos de "
 
 #: templates/about.html:9
-msgid ""
-"This software is under the terms of the <a href=\"http://www.gnu.org/"
-"licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a> License."
-msgstr ""
-"Ce logiciel est sous les termes de la licence <a href=\"http://www.gnu.org/"
-"licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a>."
+msgid "This software is under the terms of the <a href=\"http://www.gnu.org/licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a> License."
+msgstr "Ce logiciel est sous les termes de la licence <a href=\"http://www.gnu.org/licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a>."
 
 #: templates/about.html:15
-msgid ""
-"The favicon comes from the <a href=\"https://commons.wikimedia.org/wiki/File:"
-"Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-"
-"theme </a> and is licensed under the <a href=\"https://creativecommons.org/"
-"licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons "
-"Attribution-Share Alike 3.0 Unported </a> license."
-msgstr ""
-"La favicon a été extraite du <a href=\"https://commons.wikimedia.org/wiki/"
-"File:Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-"
-"icon-theme </a> et est sous licence <a href=\"https://creativecommons.org/"
-"licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons "
-"Attribution-Share Alike 3.0 Unported</a>."
+msgid "The favicon comes from the <a href=\"https://commons.wikimedia.org/wiki/File:Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-theme </a> and is licensed under the <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons Attribution-Share Alike 3.0 Unported </a> license."
+msgstr "La favicon a été extraite du <a href=\"https://commons.wikimedia.org/wiki/File:Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-theme </a> et est sous licence <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons Attribution-Share Alike 3.0 Unported</a>."
 
 #: templates/admin/base_site.html:22 templates/base.html:18
 msgid "Welcome,"
-msgstr ""
+msgstr "Bienvenue,"
 
 #: templates/admin/base_site.html:27
 msgid "View site"
@@ -217,11 +188,11 @@ msgstr "Retour au site"
 
 #: templates/admin/base_site.html:46
 msgid "Documentation"
-msgstr ""
+msgstr "Documentation"
 
 #: templates/admin/base_site.html:49 templates/base.html:26
 msgid "Log out"
-msgstr ""
+msgstr "Déconnexion"
 
 #: templates/base.html:23
 msgid "View admin"
@@ -233,22 +204,19 @@ msgstr "Mon profil"
 
 #: templates/registration/login.html:9 templates/registration/login.html:55
 msgid "Log in"
-msgstr ""
+msgstr "Connexion"
 
 #: templates/registration/login.html:14
 msgid "Please correct the error below."
-msgstr ""
+msgstr "Corrigez les erreurs suivantes."
 
 #: templates/registration/login.html:15
 msgid "Please correct the errors below."
-msgstr ""
+msgstr "Corrigez les erreurs ci-dessous."
 
 #: templates/registration/login.html:31
-#, python-format
-msgid ""
-"You are authenticated as %(username)s, but are not authorized to access this "
-"page. Would you like to login to a different account?"
-msgstr ""
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
+msgstr "Vous êtes authentifié sous le nom %(username)s, mais vous n'êtes pas autorisé à accéder à cette page. Souhaitez-vous vous connecter avec un autre compte utilisateur ?"
 
 #: templates/registration/login.html:51
 msgid "Forgotten your password?"
@@ -257,37 +225,33 @@ msgstr "Mot de passe oublié ?"
 #: templates/registration/password_change_done.html:9
 #: templates/registration/password_change_form.html:9
 msgid "Password change"
-msgstr ""
+msgstr "Modification du mot de passe"
 
 #: templates/registration/password_reset_complete.html:9
 #: templates/registration/password_reset_done.html:9
 #: templates/registration/password_reset_form.html:9
 msgid "Password reset"
-msgstr ""
+msgstr "Réinitialisation du mot de passe"
 
 #: templates/registration/password_reset_confirm.html:9
 msgid "Password reset confirmation"
-msgstr ""
+msgstr "Confirmation de mise à jour du mot de passe"
 
 #: templates/registration/password_reset_email.html:2
-#, python-format
-msgid ""
-"You're receiving this email because you requested a password reset for your "
-"user account at %(site_name)s."
-msgstr ""
+msgid "You're receiving this email because you requested a password reset for your user account at %(site_name)s."
+msgstr "Vous recevez ce message en réponse à votre demande de réinitialisation du mot de passe de votre compte sur %(site_name)s."
 
 #: templates/registration/password_reset_email.html:4
 msgid "Please go to the following page and choose a new password:"
-msgstr ""
+msgstr "Veuillez vous rendre sur cette page et choisir un nouveau mot de passe :"
 
 #: templates/registration/password_reset_email.html:9
 msgid "Thanks for using our site!"
-msgstr ""
+msgstr "Merci d'utiliser notre site !"
 
 #: templates/registration/password_reset_email.html:11
-#, python-format
 msgid "The %(site_name)s team"
-msgstr ""
+msgstr "L'équipe %(site_name)"
 
 #: users/admin.py:27 users/models.py:22
 msgid "phone number"
@@ -303,4 +267,5 @@ msgstr "profil utilisateur"
 
 #: users/templates/users/profile.html:12
 msgid "Change password"
-msgstr ""
+msgstr "Modifier le mot de passe"
+
