@@ -6,6 +6,7 @@ import '@fullcalendar/core/main.css';
 import '@fullcalendar/timeline/main.css';
 import '@fullcalendar/resource-timeline/main.css';
 import frLocale from '@fullcalendar/core/locales/fr';
+import esLocale from '@fullcalendar/core/locales/es';
 import tippy from 'tippy.js'
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             right: 'today prev,next resourceTimelineDay,resourceTimelineWeek'
         },
         height: "auto",
-        locales: [frLocale],
+        locales: [frLocale, esLocale],
         resources: 'fc/resources.json',
         events: 'fc/events.json',
         resourceRender: function (renderInfo) {
