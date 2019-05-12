@@ -1,66 +1,58 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-12 09:45+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: BookingProject\n"
+"Language: es\n"
 
 #: booking/apps.py:7
 msgid "booking"
-msgstr ""
+msgstr "reserva"
 
 #: booking/forms.py:39
 msgid "There is already a reservation at this time."
-msgstr ""
+msgstr "Ya hay una reserva a esta hora."
 
 #: booking/forms.py:44
 msgid "Reservation must end after it begins."
-msgstr ""
+msgstr "La reserva tiene que acabar despues su inicio."
 
 #: booking/forms.py:51
 msgid "You can't make a reservation in the past."
-msgstr ""
+msgstr "No se puede reservar en el pasado."
 
 #: booking/forms.py:67
 msgid "You already have to many future reservations."
-msgstr ""
+msgstr "Usted ha alcanzado el límite de reservas."
 
+#. context !!!!!!!!
 #: booking/models.py:8 booking/models.py:22 booking/models.py:36
 msgid "name"
 msgstr ""
 
 #: booking/models.py:13
 msgid "tag"
-msgstr ""
+msgstr "etiqueta"
 
 #: booking/models.py:14 booking/models.py:54
 msgid "tags"
-msgstr ""
+msgstr "etiquetas"
 
+#. seguro que se puede mejorar
 #: booking/models.py:27 booking/models.py:61
 msgid "building"
-msgstr ""
+msgstr "edificio"
 
+#. seguro que se puede mejorar
 #: booking/models.py:28
 msgid "buildings"
-msgstr ""
+msgstr "edificios"
 
 #: booking/models.py:42
 msgid "comment"
-msgstr ""
+msgstr "comentario"
 
 #: booking/models.py:43
 msgid "Describe what is special about this room, such as available equipment."
@@ -68,74 +60,79 @@ msgstr ""
 
 #: booking/models.py:48
 msgid "managers"
-msgstr ""
+msgstr "supervisores"
 
+#. sala bof
 #: booking/models.py:49
 msgid "Will manage booking for this room."
-msgstr ""
+msgstr "Se encargara de las reservas para esta sala."
 
+#. sala bof
 #: booking/models.py:66 booking/models.py:82
 msgid "room"
-msgstr ""
+msgstr "sala"
 
+#. sala bof
 #: booking/models.py:67
 msgid "rooms"
-msgstr ""
+msgstr "salas"
 
 #: booking/models.py:75
 msgid "start time"
-msgstr ""
+msgstr "hora de inicio"
 
 #: booking/models.py:78
 msgid "end time"
-msgstr ""
+msgstr "hora de fin"
 
 #: booking/models.py:86
 msgid "number of participants"
-msgstr ""
+msgstr "cantidad de participantes"
 
 #: booking/models.py:87
 msgid "Approximate if unknown."
-msgstr ""
+msgstr "Aproximar si no se conoce"
 
+#. verificar que ne se trata de validar
 #: booking/models.py:90
 msgid "validation"
-msgstr ""
+msgstr "validación"
 
 #: booking/models.py:94
 msgid "title"
-msgstr ""
+msgstr "título"
 
 #: booking/models.py:98
 msgid "purpose"
-msgstr ""
+msgstr "propósito"
 
 #: booking/models.py:99
 msgid "Specify here if it is for a club."
-msgstr ""
+msgstr "Especificar aquí si se trata de un club o una asociación."
 
+#. encargado ?
 #: booking/models.py:103
 msgid "in charge"
-msgstr ""
+msgstr "a cargo"
 
 #: booking/models.py:109
 msgid "reservation"
-msgstr ""
+msgstr "reserva"
 
 #: booking/models.py:110
 msgid "reservations"
-msgstr ""
+msgstr "reservas"
 
+#. cf room<->sala más adecuado ?
 #: booking/templates/booking/index.html:13
-msgid ""
-"To add a reservation, click on a room. To edit, click on a reservation you "
-"own."
-msgstr ""
+msgid "To add a reservation, click on a room. To edit, click on a reservation you own."
+msgstr "Para añadir una reserva, cliquea en la sala. Para editar, cliquea en una reserva que le pertenece."
 
 #: booking/templates/booking/reservation_form.html:11
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
+#. inicio ?
 #: booking/views.py:24 templates/base.html:10
 #: templates/registration/logged_out.html:9
 #: templates/registration/password_change_done.html:9
@@ -149,15 +146,15 @@ msgstr ""
 
 #: booking/views.py:38
 msgid "Create reservation"
-msgstr ""
+msgstr "Crear una reserva"
 
 #: booking/views.py:61
 msgid "Edit reservation"
-msgstr ""
+msgstr "Editar una reserva"
 
 #: booking/views.py:71
 msgid "By editing this reservation, it will be unvalidated!"
-msgstr ""
+msgstr "¡Editar une reserva la invalida!"
 
 #: booking/views.py:145
 msgid "Validated"
@@ -184,18 +181,11 @@ msgid "About "
 msgstr ""
 
 #: templates/about.html:9
-msgid ""
-"This software is under the terms of the <a href=\"http://www.gnu.org/"
-"licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a> License."
+msgid "This software is under the terms of the <a href=\"http://www.gnu.org/licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a> License."
 msgstr ""
 
 #: templates/about.html:15
-msgid ""
-"The favicon comes from the <a href=\"https://commons.wikimedia.org/wiki/File:"
-"Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-"
-"theme </a> and is licensed under the <a href=\"https://creativecommons.org/"
-"licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons "
-"Attribution-Share Alike 3.0 Unported </a> license."
+msgid "The favicon comes from the <a href=\"https://commons.wikimedia.org/wiki/File:Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-theme </a> and is licensed under the <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons Attribution-Share Alike 3.0 Unported </a> license."
 msgstr ""
 
 #: templates/admin/base_site.html:22 templates/base.html:18
@@ -235,10 +225,7 @@ msgid "Please correct the errors below."
 msgstr ""
 
 #: templates/registration/login.html:31
-#, python-format
-msgid ""
-"You are authenticated as %(username)s, but are not authorized to access this "
-"page. Would you like to login to a different account?"
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
 msgstr ""
 
 #: templates/registration/login.html:51
@@ -261,10 +248,7 @@ msgid "Password reset confirmation"
 msgstr ""
 
 #: templates/registration/password_reset_email.html:2
-#, python-format
-msgid ""
-"You're receiving this email because you requested a password reset for your "
-"user account at %(site_name)s."
+msgid "You're receiving this email because you requested a password reset for your user account at %(site_name)s."
 msgstr ""
 
 #: templates/registration/password_reset_email.html:4
@@ -276,7 +260,6 @@ msgid "Thanks for using our site!"
 msgstr ""
 
 #: templates/registration/password_reset_email.html:11
-#, python-format
 msgid "The %(site_name)s team"
 msgstr ""
 
@@ -295,3 +278,4 @@ msgstr ""
 #: users/templates/users/profile.html:12
 msgid "Change password"
 msgstr ""
+
