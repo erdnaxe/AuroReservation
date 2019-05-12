@@ -1,22 +1,177 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Booking project translation file.
+# Copyright (C) 2019
+# This file is distributed under the same license as the bookingproject package.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 09:20+0000\n"
+"POT-Creation-Date: 2019-05-12 04:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: booking/apps.py:7
+msgid "booking"
+msgstr "réservation"
+
+#: booking/forms.py:39
+msgid "There is already a reservation at this time."
+msgstr "Il y a déjà une réservation sur ce créneau."
+
+#: booking/forms.py:44
+msgid "Reservation must end after it begins."
+msgstr "La réservation doit se terminer après avoir commencé."
+
+#: booking/forms.py:51
+msgid "You can't make a reservation in the past."
+msgstr "Vous ne pouvez pas réserver dans le passé."
+
+#: booking/forms.py:67
+msgid "You already have to many future reservations."
+msgstr "Vous avez dépasser la limite de réservations."
+
+#: booking/models.py:8 booking/models.py:22 booking/models.py:36
+msgid "name"
+msgstr "nom"
+
+#: booking/models.py:13
+msgid "tag"
+msgstr "étiquette"
+
+#: booking/models.py:14 booking/models.py:54
+msgid "tags"
+msgstr "étiquettes"
+
+#: booking/models.py:27 booking/models.py:61
+msgid "building"
+msgstr "bâtiment"
+
+#: booking/models.py:28
+msgid "buildings"
+msgstr "bâtiments"
+
+#: booking/models.py:42
+msgid "comment"
+msgstr "commentaire"
+
+#: booking/models.py:43
+msgid "Describe what is special about this room, such as available equipment."
+msgstr ""
+"Indiquer ce qui est spécial dans cette pièce, par exemple l'équipement "
+"disponible."
+
+#: booking/models.py:48
+msgid "managers"
+msgstr "gestionnaires"
+
+#: booking/models.py:49
+msgid "Will manage booking for this room."
+msgstr "Gérera les réservations pour cette salle."
+
+#: booking/models.py:66 booking/models.py:82
+msgid "room"
+msgstr "salle"
+
+#: booking/models.py:67
+msgid "rooms"
+msgstr "salles"
+
+#: booking/models.py:75
+msgid "start time"
+msgstr "heure de début"
+
+#: booking/models.py:78
+msgid "end time"
+msgstr "heure de fin"
+
+#: booking/models.py:86
+msgid "number of participants"
+msgstr "nombre de paticipants"
+
+#: booking/models.py:87
+msgid "Approximate if unknown."
+msgstr "Approximatif si inconnu."
+
+#: booking/models.py:90
+msgid "validation"
+msgstr "validation"
+
+#: booking/models.py:94
+msgid "title"
+msgstr "titre"
+
+#: booking/models.py:98
+msgid "purpose"
+msgstr "raison"
+
+#: booking/models.py:99
+msgid "Specify here if it is for a club."
+msgstr "Spécifier ici si c'est pour un club ou association."
+
+#: booking/models.py:103
+msgid "in charge"
+msgstr "en charge"
+
+#: booking/models.py:109
+msgid "reservation"
+msgstr "réservation"
+
+#: booking/models.py:110
+msgid "reservations"
+msgstr "réservations"
+
+#: booking/templates/booking/index.html:13
+msgid ""
+"To add a reservation, click on a room. To edit, click on a reservation you "
+"own."
+msgstr ""
+"Pour ajouter une réservation, cliquer sur une salle. Pour éditer, cliquer "
+"sur une réservation vous appartenant."
+
+#: booking/templates/booking/reservation_form.html:11
+msgid "Save"
+msgstr ""
+
+#: booking/views.py:24 templates/base.html:10
+#: templates/registration/logged_out.html:9
+#: templates/registration/password_change_done.html:9
+#: templates/registration/password_change_form.html:9
+#: templates/registration/password_reset_complete.html:9
+#: templates/registration/password_reset_confirm.html:9
+#: templates/registration/password_reset_done.html:9
+#: templates/registration/password_reset_form.html:9
+msgid "Home"
+msgstr "Accueil"
+
+#: booking/views.py:38
+msgid "Create reservation"
+msgstr "Créer une réservation"
+
+#: booking/views.py:61
+msgid "Edit reservation"
+msgstr "Modifier la réservation"
+
+#: booking/views.py:71
+msgid "By editing this reservation, it will be unvalidated!"
+msgstr "Si vous éditez cette réservation, elle sera dévalidée !"
+
+#: booking/views.py:145
+msgid "Validated"
+msgstr "Validé"
+
+#: booking/views.py:148
+msgid "Being validated"
+msgstr "En cours de validation"
+
+#: booking/views.py:151
+msgid "Denied"
+msgstr "Refusé"
 
 #: bookingproject/settings.py:119
 msgid "English"
@@ -68,21 +223,11 @@ msgstr ""
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:10 templates/registration/logged_out.html:9
-#: templates/registration/password_change_done.html:9
-#: templates/registration/password_change_form.html:9
-#: templates/registration/password_reset_complete.html:9
-#: templates/registration/password_reset_confirm.html:9
-#: templates/registration/password_reset_done.html:9
-#: templates/registration/password_reset_form.html:9
-msgid "Home"
-msgstr ""
-
 #: templates/base.html:23
 msgid "View admin"
 msgstr "Administration"
 
-#: templates/base.html:25
+#: templates/base.html:25 users/views.py:19
 msgid "My profile"
 msgstr "Mon profil"
 
@@ -142,4 +287,20 @@ msgstr ""
 #: templates/registration/password_reset_email.html:11
 #, python-format
 msgid "The %(site_name)s team"
+msgstr ""
+
+#: users/admin.py:27 users/models.py:22
+msgid "phone number"
+msgstr "numéro de téléphone"
+
+#: users/apps.py:7
+msgid "users"
+msgstr "utilisateurs"
+
+#: users/models.py:26 users/models.py:27
+msgid "user profile"
+msgstr "profil utilisateur"
+
+#: users/templates/users/profile.html:12
+msgid "Change password"
 msgstr ""
