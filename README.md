@@ -1,5 +1,10 @@
 # Booking Project
 
+<img align="right" width="70" height="70" src="static/favicon/mstile-70x70.png">
+Booking Project est un outil permettant de réserver des salles.
+Il a été développé pour pouvoir être utilisé pour réserver des salles plus simplement
+entre les élèves et des administrations.
+
 ## Mettre en place un environnement de développement
 
 Le projet utilise Pipenv qui permet de très simplement mettre en place un environnement pour développer.
@@ -8,8 +13,11 @@ Ces versions correspondent au plus à celles dans Debian Buster.
 
 Pour mettre cet environnement en place, vérifiez que vous avez Pipenv sur votre machine, puis dans le dossier du projet :
 
+Pour la compilation du frontend, vous pouvez utiliser `yarn` ou `npm`.
+`yarn` est légèrement plus récent et rapide que `npm` mais pas toujours disponible dans les dépôts.
+
 ```bash
-yarn install  # Installation des dépendances du frontend
+yarn install  # Installation des dépendances du frontend (ou avec npm)
 pipenv install  # Installation d'un virtualenv
 pipenv shell  # Rentre dans le virtualenv
 ./manage.py migrate  # Exécute les migrations de la base de données
@@ -49,6 +57,6 @@ Les paquets nécessaires sont :
   * python3-django-reversion
   * python3-django-webpack-loader
   * python3-docutils
-  * yarn
+  * yarn (vous pouvez le remplacer par npm qui est avec nodejs)
   * nodejs
   * gettext
