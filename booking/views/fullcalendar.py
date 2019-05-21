@@ -20,14 +20,14 @@ def fc_resources(request):
     Returns resources in JSON for FullCalendar
     """
     # Add all buildings
-    buildings = Building.objects.all()
+    buildings = Building.objects.order_by('name').all()
     data = [{
         "id": f'b{b.id}',
         "title": b.name,
     } for b in buildings]
 
     # Add all rooms (with comment and url)
-    rooms = Room.objects.all()
+    rooms = Room.objects.order_by('name').all()
     for room in rooms:
         resource = {
             'id': room.id,
