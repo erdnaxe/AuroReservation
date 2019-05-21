@@ -19,6 +19,8 @@ yarn run build  # Build frontend
 ./manage.py runserver  # Lancer un serveur de développement
 ```
 
+Pensez à vérifier la timezone dans `settings.py` (par exemple `Europe/Paris`) et à changer les secrets.
+
 ## Guide du petit contributeur
 
 Lorsque vous voulez proposer une fonctionnalité vous pouvez ouvrir un rapport en bug.
@@ -48,4 +50,5 @@ Les paquets nécessaires sont :
   * python3-django-webpack-loader
   * python3-docutils
   * yarn
-
+  * nodejs
+  * gettext

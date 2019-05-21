@@ -2,7 +2,8 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 from django import forms
-from django.contrib.admin import widgets
+from django.contrib.admin.widgets import AdminSplitDateTime
+from django.forms import SplitDateTimeField
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
@@ -77,11 +78,11 @@ class ReservationForm(ReservationAdminForm):
     class Meta:
         model = Reservation
         exclude = ('in_charge', 'validation')
-
-    def __init__(self, *args, **kwargs):
-        """
-        Load Django Admin datetime widget
-        """
-        super().__init__(*args, **kwargs)
-        self.fields['start_time'].widget = widgets.AdminSplitDateTime()
-        self.fields['end_time'].widget = widgets.AdminSplitDateTime()
+        field_classes = {
+            'start_time': SplitDateTimeField,
+            'end_time': SplitDateTimeField,
+        }
+        widgets = {
+            'start_time': AdminSplitDateTime,
+            'end_time': AdminSplitDateTime,
+        }
