@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BookingProject\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-21 07:24+0000\n"
+"POT-Creation-Date: 2019-05-21 10:21+0200\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,19 +13,19 @@ msgstr ""
 msgid "booking"
 msgstr "reserva"
 
-#: booking/forms.py:40
+#: booking/forms.py:41
 msgid "There is already a reservation at this time."
 msgstr "Ya hay una reserva a esta hora."
 
-#: booking/forms.py:45
+#: booking/forms.py:46
 msgid "Reservation must end after it begins."
 msgstr "La reserva tiene que acabar despues su inicio."
 
-#: booking/forms.py:52
+#: booking/forms.py:53
 msgid "You can't make a reservation in the past."
 msgstr "No se puede reservar en el pasado."
 
-#: booking/forms.py:68
+#: booking/forms.py:69
 msgid "You already have to many future reservations."
 msgstr "Usted ha alcanzado el límite de reservas."
 
@@ -127,19 +127,19 @@ msgstr ""
 "Para añadir una reserva, cliquea en la sala. Para editar, cliquea en una "
 "reserva que le pertenece."
 
-#: booking/templates/booking/reservation_form.html:39
+#: booking/templates/booking/reservation_form.html:46
 msgid "Save"
 msgstr "Guardar"
 
-#: booking/views/fullcalendar.py:76
+#: booking/views/fullcalendar.py:80
 msgid "Validated"
 msgstr "Validado"
 
-#: booking/views/fullcalendar.py:79
+#: booking/views/fullcalendar.py:83
 msgid "Being validated"
 msgstr "En proceso de validación"
 
-#: booking/views/fullcalendar.py:82
+#: booking/views/fullcalendar.py:86
 msgid "Denied"
 msgstr "Rechazado"
 

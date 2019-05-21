@@ -18,6 +18,13 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 {% block content %}
     <form method="post">{% csrf_token %}
+        {% if form.non_field_errors %}
+            <p class="errornote">
+                {% for error in form.non_field_errors %}
+                    {{ error }}
+                {% endfor %}
+            </p>
+        {% endif %}
         <fieldset class="module aligned">
             {% for field in form %}
                 <div class="form-row{% if field.errors %} errors{% endif %}">
