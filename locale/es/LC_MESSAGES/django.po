@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BookingProject\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-21 06:23+0000\n"
+"POT-Creation-Date: 2019-05-21 06:36+0000\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -178,7 +178,7 @@ msgstr "Francés"
 msgid "Spanish"
 msgstr ""
 
-#: bookingproject/views.py:12 templates/admin/base_site.html:79
+#: bookingproject/views.py:12 templates/admin/base_site.html:80
 msgid "About "
 msgstr "A propósito de "
 

@@ -73,27 +73,29 @@ SPDX-License-Identifier: GPL-2.0-or-later
 {% endblock %}
 
 {% block footer %}
-    <div id="footer">
-        <p>
-            <a href="{% url 'about' %}">
-                {% trans "About " %}{{ request.site.name }}.
-            </a>
-        </p>
-        <form action="{% url 'set_language' %}" method="post">
-            {% csrf_token %}
-            <select title="language" name="language" onchange="this.form.submit()">
-                {% get_current_language as LANGUAGE_CODE %}
-                {% get_available_languages as LANGUAGES %}
-                {% get_language_info_list for LANGUAGES as languages %}
-                {% for language in languages %}
-                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                        {{ language.name_local }} ({{ language.code }})
-                    </option>
-                {% endfor %}
-            </select>
-            <noscript>
-                <input type="submit">
-            </noscript>
-        </form>
-    </div>
+    {% if not is_popup %}
+        <div id="footer">
+            <p>
+                <a href="{% url 'about' %}">
+                    {% trans "About " %}{{ request.site.name }}.
+                </a>
+            </p>
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <select title="language" name="language" onchange="this.form.submit()">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select>
+                <noscript>
+                    <input type="submit">
+                </noscript>
+            </form>
+        </div>
+    {% endif %}
 {% endblock %}
