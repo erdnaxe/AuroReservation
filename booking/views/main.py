@@ -1,5 +1,6 @@
 # -*- mode: python; coding: utf-8 -*-
 # SPDX-License-Identifier: GPL-2.0-or-later
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -78,4 +79,3 @@ class ReservationUpdate(LoginRequiredMixin, UpdateView):
         reservation.in_charge = self.request.user
         reservation.validation = None
         return super().form_valid(form)
-

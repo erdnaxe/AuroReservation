@@ -1,5 +1,6 @@
 # -*- mode: python; coding: utf-8 -*-
 # SPDX-License-Identifier: GPL-2.0-or-later
+
 from rest_framework import viewsets
 from rest_framework.permissions import DjangoModelPermissions
 

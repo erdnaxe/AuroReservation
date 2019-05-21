@@ -5,6 +5,9 @@ from django.forms.fields import DateTimeField
 from django.http import JsonResponse
 from django.urls import reverse
 from django.utils import timezone
+# -*- mode: python; coding: utf-8 -*-
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 from django.utils.translation import gettext_lazy as _
 
 from ..models import Building, Room, Reservation
