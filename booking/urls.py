@@ -3,8 +3,8 @@
 
 from django.urls import path
 
-from .views import index, ReservationCreate, ReservationUpdate,\
-    fc_resources, fc_events
+from .views.main import index, ReservationCreate, ReservationUpdate
+from .views.fullcalendar import fc_resources, fc_events
 
 urlpatterns = [
     path('', index, name='index'),

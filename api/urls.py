@@ -3,7 +3,7 @@
 
 from rest_framework import routers
 
-from booking.views import TagViewSet, RoomViewSet, ReservationViewSet
+from booking.views.api import TagViewSet, RoomViewSet, ReservationViewSet
 from users.views import UserViewSet, GroupViewSet
 
 router = routers.DefaultRouter()
