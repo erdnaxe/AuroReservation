@@ -29,6 +29,9 @@ yarn run build  # Build frontend
 
 Pensez à vérifier la timezone dans `settings.py` (par exemple `Europe/Paris`) et à changer les secrets.
 
+Vous pouvez activer `django_extensions` dans les `INSTALLED_APPS` pour avoir accès à une commande permettant
+de tracer le graphe des dépendances des modèles. 
+
 ## Guide du petit contributeur
 
 Lorsque vous voulez proposer une fonctionnalité vous pouvez ouvrir un rapport en bug.
@@ -53,7 +56,6 @@ Les paquets nécessaires sont :
 
   * [python3-django](https://packages.debian.org/experimental/all/python3-django/download) (prendre pour le moment la version de `experimental`)
   * python3-djangorestframework
-  * python3-django-extensions
   * python3-django-reversion
   * python3-django-webpack-loader
   * python3-docutils
