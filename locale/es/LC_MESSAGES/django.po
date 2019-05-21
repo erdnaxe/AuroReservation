@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BookingProject\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-21 06:36+0000\n"
+"POT-Creation-Date: 2019-05-21 07:07+0000\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,7 +127,7 @@ msgstr ""
 "Para añadir una reserva, cliquea en la sala. Para editar, cliquea en una "
 "reserva que le pertenece."
 
-#: booking/templates/booking/reservation_form.html:11
+#: booking/templates/booking/reservation_form.html:31
 msgid "Save"
 msgstr "Guardar"
 
