@@ -1,8 +1,10 @@
 # -*- mode: python; coding: utf-8 -*-
 # SPDX-License-Identifier: GPL-2.0-or-later
 from django.contrib.auth.decorators import login_required
+from django.forms.fields import DateTimeField
 from django.http import JsonResponse
 from django.urls import reverse
+from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 from ..models import Building, Room, Reservation
@@ -54,9 +56,11 @@ def fc_events(request):
     start_time = request.GET.get('start')
     end_time = request.GET.get('end')
     if start_time and end_time:
+        start = DateTimeField().clean(start_time.replace('T', ' '))
+        end = DateTimeField().clean(end_time.replace('T', ' '))
         queryset = Reservation.objects.filter(
-            start_time__lt=end_time,
-            end_time__gt=start_time,
+            start_time__lt=end,
+            end_time__gt=start,
         )
     else:
         queryset = Reservation.objects
@@ -68,8 +72,8 @@ def fc_events(request):
         event = {
             'resourceId': reservation.room.id,
             'title': reservation.purpose_title,
-            'start': reservation.start_time,
-            'end': reservation.end_time,
+            'start': timezone.localtime(reservation.start_time),
+            'end': timezone.localtime(reservation.end_time),
             'url': reverse('edit', args=(reservation.id,)),
         }
         if reservation.validation:
@@ -89,8 +93,8 @@ def fc_events(request):
         event = {
             'resourceId': reservation.room.id,
             'title': reservation.purpose_title,
-            'start': reservation.start_time,
-            'end': reservation.end_time,
+            'start': timezone.localtime(reservation.start_time),
+            'end': timezone.localtime(reservation.end_time),
         }
         data.append(event)
 
