@@ -59,13 +59,18 @@ input[type=button]:focus, .button:hover, input[type=submit]:hover, input[type=bu
 }
 
 #user-tools .dropdown-content {
-    display: none; /* hidden by default */
+    display: block;
     position: absolute;
     background-color: #444444;
     min-width: 180px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    z-index: 2000;
     text-align: left;
+
+    /* Hide menu by making it transparent */
+    transition: opacity 100ms, visibility 100ms;
+    opacity: 0;
+    visibility: hidden;
 }
 
 #user-tools .dropdown-content a {
@@ -81,7 +86,8 @@ input[type=button]:focus, .button:hover, input[type=submit]:hover, input[type=bu
 }
 
 #user-tools .dropdown:hover .dropdown-content {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Fix navigation hidden */

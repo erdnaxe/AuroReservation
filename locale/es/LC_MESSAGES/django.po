@@ -1,11 +1,13 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: BookingProject\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-21 06:03+0000\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
-"Project-Id-Version: BookingProject\n"
-"Language: es\n"
 
 #: booking/apps.py:7
 msgid "booking"
@@ -27,7 +29,6 @@ msgstr "No se puede reservar en el pasado."
 msgid "You already have to many future reservations."
 msgstr "Usted ha alcanzado el límite de reservas."
 
-#. context !!!!!!!!
 #: booking/models.py:8 booking/models.py:22 booking/models.py:36
 msgid "name"
 msgstr ""
@@ -40,12 +41,10 @@ msgstr "etiqueta"
 msgid "tags"
 msgstr "etiquetas"
 
-#. seguro que se puede mejorar
 #: booking/models.py:27 booking/models.py:61
 msgid "building"
 msgstr "edificio"
 
-#. seguro que se puede mejorar
 #: booking/models.py:28
 msgid "buildings"
 msgstr "edificios"
@@ -54,26 +53,24 @@ msgstr "edificios"
 msgid "comment"
 msgstr "comentario"
 
-#. sala bof
 #: booking/models.py:43
 msgid "Describe what is special about this room, such as available equipment."
-msgstr "Describir las características de esta sala, por ejemplo el material disponible."
+msgstr ""
+"Describir las características de esta sala, por ejemplo el material "
+"disponible."
 
 #: booking/models.py:48
 msgid "managers"
 msgstr "supervisores"
 
-#. sala bof
 #: booking/models.py:49
 msgid "Will manage booking for this room."
 msgstr "Se encargara de las reservas para esta sala."
 
-#. sala bof
 #: booking/models.py:66 booking/models.py:82
 msgid "room"
 msgstr "sala"
 
-#. sala bof
 #: booking/models.py:67
 msgid "rooms"
 msgstr "salas"
@@ -94,7 +91,6 @@ msgstr "cantidad de participantes"
 msgid "Approximate if unknown."
 msgstr "Aproximar si no se conoce"
 
-#. verificar que ne se trata de validar
 #: booking/models.py:90
 msgid "validation"
 msgstr "validación"
@@ -111,7 +107,6 @@ msgstr "propósito"
 msgid "Specify here if it is for a club."
 msgstr "Especificar aquí si se trata de un club o una asociación."
 
-#. encargado ?
 #: booking/models.py:103
 msgid "in charge"
 msgstr "a cargo"
@@ -124,17 +119,19 @@ msgstr "reserva"
 msgid "reservations"
 msgstr "reservas"
 
-#. cf room<->sala más adecuado ?
 #: booking/templates/booking/index.html:13
-msgid "To add a reservation, click on a room. To edit, click on a reservation you own."
-msgstr "Para añadir una reserva, cliquea en la sala. Para editar, cliquea en una reserva que le pertenece."
+msgid ""
+"To add a reservation, click on a room. To edit, click on a reservation you "
+"own."
+msgstr ""
+"Para añadir una reserva, cliquea en la sala. Para editar, cliquea en una "
+"reserva que le pertenece."
 
 #: booking/templates/booking/reservation_form.html:11
 msgid "Save"
 msgstr "Guardar"
 
-#. inicio ?
-#: booking/views.py:24 templates/base.html:10
+#: booking/views.py:24 templates/base.html:11
 #: templates/registration/logged_out.html:9
 #: templates/registration/password_change_done.html:9
 #: templates/registration/password_change_form.html:9
@@ -177,19 +174,37 @@ msgstr "Inglés"
 msgid "French"
 msgstr "Francés"
 
-#: bookingproject/views.py:12 templates/admin/base_site.html:74
+#: bookingproject/settings.py:121
+msgid "Spanish"
+msgstr ""
+
+#: bookingproject/views.py:12 templates/admin/base_site.html:79
 msgid "About "
 msgstr "A propósito de "
 
 #: templates/about.html:9
-msgid "This software is under the terms of the <a href=\"http://www.gnu.org/licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a> License."
-msgstr "Este programa se encuentra bajo licencia <a href=\"http://www.gnu.org/licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a>."
+msgid ""
+"This software is under the terms of the <a href=\"http://www.gnu.org/"
+"licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a> License."
+msgstr ""
+"Este programa se encuentra bajo licencia <a href=\"http://www.gnu.org/"
+"licenses/gpl-2.0.txt\" target=\"_blank\" rel=\"nofollow\">GPLv2</a>."
 
 #: templates/about.html:15
-msgid "The favicon comes from the <a href=\"https://commons.wikimedia.org/wiki/File:Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-theme </a> and is licensed under the <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons Attribution-Share Alike 3.0 Unported </a> license."
-msgstr "La favicon viene de <a href=\"https://commons.wikimedia.org/wiki/File:Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-theme </a>, se encuentra bajo licencia <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons Attribution-Share Alike 3.0 Unported</a>."
+msgid ""
+"The favicon comes from the <a href=\"https://commons.wikimedia.org/wiki/File:"
+"Gnome-appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-"
+"theme </a> and is licensed under the <a href=\"https://creativecommons.org/"
+"licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons "
+"Attribution-Share Alike 3.0 Unported </a> license."
+msgstr ""
+"La favicon viene de <a href=\"https://commons.wikimedia.org/wiki/File:Gnome-"
+"appointment-soon.svg\" target=\"_blank\" rel=\"nofollow\"> gnome-icon-theme "
+"</a>, se encuentra bajo licencia <a href=\"https://creativecommons.org/"
+"licenses/by-sa/3.0/\" target=\"_blank\" rel=\"nofollow\"> Creative Commons "
+"Attribution-Share Alike 3.0 Unported</a>."
 
-#: templates/admin/base_site.html:22 templates/base.html:18
+#: templates/admin/base_site.html:22
 msgid "Welcome,"
 msgstr "Bienvenido,"
 
@@ -197,22 +212,21 @@ msgstr "Bienvenido,"
 msgid "View site"
 msgstr "Regresar al sitio"
 
-#: templates/admin/base_site.html:46
-msgid "Documentation"
-msgstr "Documentación"
-
-#: templates/admin/base_site.html:49 templates/base.html:26
-msgid "Log out"
-msgstr "Cerrar la sesión"
-
-#. no me satisfecha
-#: templates/base.html:23
+#: templates/admin/base_site.html:32 templates/admin/base_site.html:51
 msgid "View admin"
 msgstr "Administración"
 
-#: templates/base.html:25 users/views.py:19
+#: templates/admin/base_site.html:44
+msgid "Documentation"
+msgstr "Documentación"
+
+#: templates/admin/base_site.html:53 users/views.py:19
 msgid "My profile"
 msgstr "Mi perfil"
+
+#: templates/admin/base_site.html:54
+msgid "Log out"
+msgstr "Cerrar la sesión"
 
 #: templates/registration/login.html:9 templates/registration/login.html:55
 msgid "Log in"
@@ -227,8 +241,13 @@ msgid "Please correct the errors below."
 msgstr "Por favor corrija las errores por debajo."
 
 #: templates/registration/login.html:31
-msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
-msgstr "Usted es autentificado como %(username)s, pero esta página le esta prohibida. ¿ Quire iniciar sesión con otra cuenta ?"
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+"Usted es autentificado como %(username)s, pero esta página le esta "
+"prohibida. ¿ Quire iniciar sesión con otra cuenta ?"
 
 #: templates/registration/login.html:51
 msgid "Forgotten your password?"
@@ -245,14 +264,18 @@ msgstr "Cambiar la contraseña"
 msgid "Password reset"
 msgstr "Reiniciar la contraseña"
 
-#. problema francés<-> inglés
 #: templates/registration/password_reset_confirm.html:9
 msgid "Password reset confirmation"
 msgstr "Confirmación de cambio de contraseña"
 
 #: templates/registration/password_reset_email.html:2
-msgid "You're receiving this email because you requested a password reset for your user account at %(site_name)s."
-msgstr "Recibe este correo porque pidió una reinicialización de contraseña para su cuenta en %(site_name)s."
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+"Recibe este correo porque pidió una reinicialización de contraseña para su "
+"cuenta en %(site_name)s."
 
 #: templates/registration/password_reset_email.html:4
 msgid "Please go to the following page and choose a new password:"
@@ -263,8 +286,9 @@ msgid "Thanks for using our site!"
 msgstr "¡ Gracias por utilizar nuestro sitio web !"
 
 #: templates/registration/password_reset_email.html:11
+#, python-format
 msgid "The %(site_name)s team"
-msgstr "El equipo de %(site_name)"
+msgstr "El equipo de %(site_name)s"
 
 #: users/admin.py:27 users/models.py:22
 msgid "phone number"
@@ -281,4 +305,3 @@ msgstr "perfil usuario"
 #: users/templates/users/profile.html:12
 msgid "Change password"
 msgstr "Cambiar la contraseña"
-

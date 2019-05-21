@@ -16,7 +16,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
 {% endblock %}
 
 {% block usertools %}
-    {% if has_permission %}
+    {% if user.is_authenticated %}
         <div id="user-tools">
             {% block welcome-msg %}
                 {% trans 'Welcome,' %}
@@ -27,26 +27,31 @@ SPDX-License-Identifier: GPL-2.0-or-later
                     <a href="{{ site_url }}">{% trans 'View site' %}</a> /
                 {% endif %}
                 {% if available_apps %}
-                    {% for app in available_apps %}
-                        <span class="dropdown">
-                            <a href="{{ app.app_url }}">{{ app.name }}</a>
-                            <div class="dropdown-content">
+                    {# When in admin site, list all admin pages and documentation #}
+                    <span class="dropdown">
+                        <a href="{% url 'admin:index' %}">{% trans 'View admin' %}</a>
+                        <div class="dropdown-content">
+                            {% for app in available_apps %}
                                 {% for model in app.models %}
                                     {% if model.admin_url %}
                                         <a href="{{ model.admin_url }}">{{ model.name }}</a>
                                     {% endif %}
                                 {% endfor %}
-                            </div>
-                        </span> /
-                    {% endfor %}
+                            {% endfor %}
+                            {% if user.is_active and user.is_superuser %}
+                                {% url 'django-admindocs-docroot' as docsroot %}
+                                {% if docsroot %}
+                                    <a href="{{ docsroot }}">{% trans 'Documentation' %}</a>
+                                {% endif %}
+                            {% endif %}
+                         </div>
+                    </span> /
+                {% elif user.is_staff %}
+                    {# When not in admin site, but user is staff then add a link #}
+                    <a href="{% url 'admin:index' %}">{% trans 'View admin' %}</a> /
                 {% endif %}
-                {% if user.is_active and user.is_staff %}
-                    {% url 'django-admindocs-docroot' as docsroot %}
-                    {% if docsroot %}
-                        <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
-                    {% endif %}
-                {% endif %}
-                <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+                <a href="{% url 'profile' %}">{% trans 'My profile' %}</a> /
+                <a href="{% url 'logout' %}">{% trans 'Log out' %}</a>
             {% endblock %}
         </div>
     {% endif %}
