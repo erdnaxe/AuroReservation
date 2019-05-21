@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BookingProject\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-21 07:07+0000\n"
+"POT-Creation-Date: 2019-05-21 07:24+0000\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,19 +13,19 @@ msgstr ""
 msgid "booking"
 msgstr "reserva"
 
-#: booking/forms.py:39
+#: booking/forms.py:40
 msgid "There is already a reservation at this time."
 msgstr "Ya hay una reserva a esta hora."
 
-#: booking/forms.py:44
+#: booking/forms.py:45
 msgid "Reservation must end after it begins."
 msgstr "La reserva tiene que acabar despues su inicio."
 
-#: booking/forms.py:51
+#: booking/forms.py:52
 msgid "You can't make a reservation in the past."
 msgstr "No se puede reservar en el pasado."
 
-#: booking/forms.py:67
+#: booking/forms.py:68
 msgid "You already have to many future reservations."
 msgstr "Usted ha alcanzado el límite de reservas."
 
@@ -127,7 +127,7 @@ msgstr ""
 "Para añadir una reserva, cliquea en la sala. Para editar, cliquea en una "
 "reserva que le pertenece."
 
-#: booking/templates/booking/reservation_form.html:31
+#: booking/templates/booking/reservation_form.html:39
 msgid "Save"
 msgstr "Guardar"
 
