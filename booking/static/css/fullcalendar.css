@@ -1,4 +1,10 @@
-/* Make fullcalendar unthemed borders stronger */
+/*
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ * This is the custom style for FullCalendar
+ */
+
+/* Make unthemed borders stronger */
 .fc-unthemed th,
 .fc-unthemed td,
 .fc-unthemed thead,

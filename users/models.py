@@ -1,3 +1,6 @@
+# -*- mode: python; coding: utf-8 -*-
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.db import models

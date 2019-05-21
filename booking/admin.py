@@ -1,4 +1,6 @@
-# -*- coding: utf-8 -*-
+# -*- mode: python; coding: utf-8 -*-
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 from django.contrib import admin
 from reversion.admin import VersionAdmin
 
