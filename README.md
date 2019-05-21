@@ -1,6 +1,6 @@
 # Booking Project
 
-<img align="right" hspace=”50” vspace=”50” width="192" height="192" src="static/favicon/android-chrome-192x192.png">
+<img align="right" width="70" height="70" src="static/favicon/mstile-70x70.png">
 Booking Project est un outil permettant de réserver des salles.
 Il a été développé pour pouvoir être utilisé pour réserver des salles plus simplement
 entre les élèves et des administrations.
