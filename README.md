@@ -47,6 +47,12 @@ Les règles de contributions :
 
 Je vous conseille de vous référez au guide de contribution de Django.
 
+## Contribuer à la traduction
+
+Ce projet utilise POEditor comme plateforme de traduction collaborative.
+Vous pouvez rejoindre l'équipe de traduction en suivant ce lien :
+<https://poeditor.com/join/project/A5nqT2DDsz>
+
 ## Installation sous Debian Buster
 
 Les dépendances du projet ont été choisis pour être disponibles dans Debian
