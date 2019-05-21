@@ -68,3 +68,16 @@ Les paquets nécessaires sont :
   * yarn (vous pouvez le remplacer par npm qui est avec nodejs)
   * nodejs
   * gettext
+
+## Crédits
+
+ - [pa](https://gitlab.crans.org/pa) (structure du projet, traduction anglaise et motivation) ;
+ - [lieunoir](https://gitlab.crans.org/lieunoir) (formulaires et motivation) ;
+ - [erdnaxe](https://gitlab.crans.org/erdnaxe) (interface utilisateur) ;
+ - [elkmaennchen](https://gitlab.crans.org/elkmaennchen) (traduction espagnole).
+
+## Licence
+
+Ce projet est sous [licence GPL](LICENSE) parce que l'on croît au développement ouvert.
+La licence GPL implique des droits et des devoirs.
+Veuillez vous référer au fichier de licence pour plus d'informations.
