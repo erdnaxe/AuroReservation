@@ -17,7 +17,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
 {% endblock %}
 
 {% block content %}
-    <form method="post">{% csrf_token %}
+    <form method="post" onsubmit="window.onbeforeunload=null">{% csrf_token %}
         {% if form.non_field_errors %}
             <p class="errornote">
                 {% for error in form.non_field_errors %}
@@ -45,4 +45,10 @@ SPDX-License-Identifier: GPL-2.0-or-later
         </fieldset>
         <input type="submit" value="{% trans 'Save' %}">
     </form>
+    <script type="text/javascript">
+        // Confirmation dialog when user exists without saving changes
+        window.onbeforeunload = function () {
+            return true;
+        };
+    </script>
 {% endblock %}
