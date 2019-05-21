@@ -8,11 +8,11 @@ SPDX-License-Identifier: GPL-2.0-or-later
 {% block title %}{{ title }} | {{ request.site.name }}{% endblock %}
 
 {% block branding %}
-    <h1 id="site-name">
+    <strong id="site-name">
         <a href="{% url 'index' %}">
             {{ request.site.name }}
         </a>
-    </h1>
+    </strong>
 {% endblock %}
 
 {% block usertools %}
@@ -75,11 +75,6 @@ SPDX-License-Identifier: GPL-2.0-or-later
 {% block footer %}
     {% if not is_popup %}
         <div id="footer">
-            <p>
-                <a href="{% url 'about' %}">
-                    {% trans "About " %}{{ request.site.name }}.
-                </a>
-            </p>
             <form action="{% url 'set_language' %}" method="post">
                 {% csrf_token %}
                 <select title="language" name="language" onchange="this.form.submit()">
@@ -95,6 +90,9 @@ SPDX-License-Identifier: GPL-2.0-or-later
                 <noscript>
                     <input type="submit">
                 </noscript>
+                <a href="{% url 'about' %}">
+                    {% trans "About " %}{{ request.site.name }}.
+                </a>
             </form>
         </div>
     {% endif %}

@@ -43,7 +43,7 @@ Buster.
 
 Les paquets nécessaires sont :
 
-  * python3-django (prendre pour le moment la version de `experimental`)
+  * [python3-django](https://packages.debian.org/experimental/all/python3-django/download) (prendre pour le moment la version de `experimental`)
   * python3-djangorestframework
   * python3-django-extensions
   * python3-django-reversion

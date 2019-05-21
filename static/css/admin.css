@@ -8,8 +8,9 @@
 
 /* Colors */
 #header {
-    background-color: #222;
-    border-bottom: solid 3px #f9a01b;
+    background-color: #151515;
+    border-bottom: solid 5px #d80029;
+    padding: 10px 40px;
 }
 
 .module h2, .module caption, .inline-group h2 {
@@ -121,7 +122,7 @@ input[type=button]:focus, .button:hover, input[type=submit]:hover, input[type=bu
 
 /* Pull footer to bottom */
 #content {
-    min-height: calc(100vh - 310px);
+    min-height: calc(100vh - 190px);
 }
 
 .login #content {

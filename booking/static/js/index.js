@@ -8,6 +8,7 @@ import '@fullcalendar/resource-timeline/main.css';
 import frLocale from '@fullcalendar/core/locales/fr';
 import esLocale from '@fullcalendar/core/locales/es';
 import tippy from 'tippy.js'
+import '../css/fullcalendar.css';
 
 document.addEventListener('DOMContentLoaded', function () {
     let calendarEl = document.getElementById('calendar');
