@@ -23,11 +23,8 @@ class RoomSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ReservationSerializer(serializers.HyperlinkedModelSerializer):
-    """
-    Do not show purpose_body or in_charge for privacy reasons
-    """
-
     class Meta:
         model = Reservation
         fields = ('url', 'start_time', 'end_time', 'room',
-                  'number_participants', 'validation', 'purpose_title')
+                  'number_participants', 'validation', 'purpose_title',
+                  'purpose_body', 'in_charge')
