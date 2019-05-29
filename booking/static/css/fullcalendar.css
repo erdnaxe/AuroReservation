@@ -17,3 +17,14 @@
 .fc-unthemed .fc-list-heading td {
     border-color: #ccc;
 }
+
+/* Make links look like links */
+.fc-cell-text.link {
+    color: #447e9b;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fc-cell-text.link:hover {
+    color: #036;
+}

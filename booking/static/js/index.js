@@ -35,9 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Link to add a reservation
             if (renderInfo.resource.extendedProps.add_url) {
-                cellText.style.color = "#447e9b";
-                cellText.style.fontWeight = "bold";
-                cellText.style.cursor = 'pointer';
+                cellText.classList.add('link');
                 cellText.addEventListener('click', function () {
                     window.location.href = renderInfo.resource.extendedProps.add_url;
                 });
