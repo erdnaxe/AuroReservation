@@ -23,14 +23,14 @@ class ReservationAdminForm(forms.ModelForm):
         """
         Check global form constraints
         """
-        form_data = self.cleaned_data
-        validation = form_data.get('validation')
-        start_time = form_data['start_time']
-        end_time = form_data['end_time']
+        cleaned_data = super().clean()
+        validation = cleaned_data.get('validation')
+        start_time = cleaned_data.get('start_time')
+        end_time = cleaned_data.get('end_time')
 
         # When validating, check that there is no reservation at that time
         if validation:
-            reservation_list = form_data['room'].reservation_set.filter(
+            reservation_list = cleaned_data['room'].reservation_set.filter(
                 validation=True,
                 start_time__lt=end_time,
                 end_time__gt=start_time,
@@ -41,18 +41,18 @@ class ReservationAdminForm(forms.ModelForm):
                     _("There is already a reservation at this time."))
 
         # Check that end time is after start time
-        if start_time > end_time:
+        if start_time and end_time and start_time > end_time:
             raise forms.ValidationError(
                 _("Reservation must end after it begins.")
             )
 
         # Check that start time is not in the past
         now = timezone.now()
-        if now > start_time:
+        if start_time and now > start_time:
             raise forms.ValidationError(
                 _("You can't make a reservation in the past."))
 
-        return form_data
+        return cleaned_data
 
     def clean_in_charge(self):
         """
