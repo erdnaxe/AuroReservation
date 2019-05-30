@@ -1,0 +1,12 @@
+dist: xenial
+language: python
+python:
+  - 3.7
+install:
+  - pip install pipenv coveralls
+  - pipenv install --system
+script:
+  - python manage.py migrate
+  - coverage run --source=./ python manage.py test booking
+after_success:
+  - coveralls
