@@ -1,5 +1,9 @@
 # Booking Project
 
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![Build Status](https://api.travis-ci.org/erdnaxe/AuroReservation.svg?branch=master)](https://travis-ci.com/erdnaxe/AuroReservation)
+[![Coverage Status](https://coveralls.io/repos/github/erdnaxe/AuroReservation/badge.svg?branch=master)](https://coveralls.io/github/erdnaxe/AuroReservation?branch=master)
+
 <img align="right" width="70" height="70" src="static/favicon/mstile-70x70.png">
 Booking Project est un outil permettant de réserver des salles.
 Il a été développé pour pouvoir être utilisé pour réserver des salles plus simplement
