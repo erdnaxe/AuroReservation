@@ -7,6 +7,6 @@ install:
   - pipenv install --system
 script:
   - python manage.py migrate
-  - coverage run --source=./ python manage.py test booking
+  - coverage run --source=./ manage.py test booking
 after_success:
   - coveralls
