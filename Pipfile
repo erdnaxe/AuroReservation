@@ -13,6 +13,7 @@ docutils = "==0.14"
 djangorestframework = ">=3.9.1"
 django-webpack-loader = "==0.6.0"
 gunicorn = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.7"
