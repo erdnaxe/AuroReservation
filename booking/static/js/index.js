@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         locales: [frLocale, esLocale],
         resources: "fc/resources.json",
         events: "fc/events.json",
-        resourceRender: function (renderInfo) {
+        resourceRender(renderInfo) {
             const cellText = renderInfo.el.querySelector(".fc-cell-text");
 
             // Link to add a reservation
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Tooltip
             if (renderInfo.resource.extendedProps.comment) {
-                new tippy(cellText, {
+                tippy(cellText, {
                     content: renderInfo.resource.extendedProps.comment.replace(/\n/g, "<br />"),
                     placement: "right",
                     arrow: true,
@@ -51,13 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         },
-        eventRender: function (renderInfo) {
+        eventRender(renderInfo) {
             renderInfo.el.style.color = "white";
-            const cellText = renderInfo.el.querySelector(".fc-content");
 
             // Tooltip
             if (renderInfo.event.extendedProps.comment) {
-                new tippy(renderInfo.el, {
+                tippy(renderInfo.el, {
                     content: renderInfo.event.extendedProps.comment,
                     placement: "top",
                     arrow: true,
