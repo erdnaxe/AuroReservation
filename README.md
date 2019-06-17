@@ -1,7 +1,9 @@
 # Booking Project
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/736e11a0602645ee89991b1bd373feb0)](https://app.codacy.com/app/erdnaxe/AuroReservation?utm_source=github.com&utm_medium=referral&utm_content=erdnaxe/AuroReservation&utm_campaign=Badge_Grade_Dashboard)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/736e11a0602645ee89991b1bd373feb0)](https://app.codacy.com/app/erdnaxe/AuroReservation?utm_source=github.com&utm_medium=referral&utm_content=erdnaxe/AuroReservation&utm_campaign=Badge_Grade_Dashboard)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/erdnaxe/AuroReservation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/erdnaxe/AuroReservation/?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0f76436f2c80f0b0a7a9/maintainability)](https://codeclimate.com/github/erdnaxe/AuroReservation/maintainability)
 [![Build Status](https://api.travis-ci.com/erdnaxe/AuroReservation.svg?branch=master)](https://travis-ci.com/erdnaxe/AuroReservation)
 [![Coverage Status](https://coveralls.io/repos/github/erdnaxe/AuroReservation/badge.svg?branch=master)](https://coveralls.io/github/erdnaxe/AuroReservation?branch=master)
 
@@ -89,6 +91,8 @@ Les paquets nécessaires sont :
 -   [Codacy](https://www.codacy.com/app/erdnaxe/AuroReservation) ;
 -   [TravisCI](https://travis-ci.com/erdnaxe/AuroReservation) ;
 -   [CoverAlls](https://coveralls.io/github/erdnaxe/AuroReservation?branch=master) ;
+-   [ScrutinizerCI](https://scrutinizer-ci.com) ;
+-   [CodeClimate](https://codeclimate.com/) ;
 
 ## Licence
 
