@@ -1,13 +1,13 @@
 # -*- mode: python; coding: utf-8 -*-
 # SPDX-License-Identifier: GPL-2.0-or-later
 
+"""Project URL Configuration"""
+
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView
 
 from .views import about
-
-"""bookingproject URL Configuration"""
 
 urlpatterns = [
     path('', include('booking.urls')),

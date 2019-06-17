@@ -24,7 +24,8 @@ class CustomUserAdmin(UserAdmin):
     list_select_related = ('profile',)
     form = CustomUserChangeForm
 
-    def get_phone_number(self, instance):
+    @staticmethod
+    def get_phone_number(instance):
         return instance.profile.phone_number
 
     get_phone_number.short_description = _('phone number')

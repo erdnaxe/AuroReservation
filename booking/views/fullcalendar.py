@@ -1,22 +1,20 @@
 # -*- mode: python; coding: utf-8 -*-
 # SPDX-License-Identifier: GPL-2.0-or-later
-from django.contrib.auth.decorators import login_required
-from django.forms.fields import DateTimeField
-from django.http import JsonResponse
-from django.urls import reverse
-from django.utils import timezone
-# -*- mode: python; coding: utf-8 -*-
-# SPDX-License-Identifier: GPL-2.0-or-later
-
-from django.utils.translation import gettext_lazy as _
-
-from ..models import Building, Room, Reservation
 
 """
 Views specific to FullCalendar
 
 These views generate JSON API endpoints that FullCalendar can use.
 """
+
+from django.contrib.auth.decorators import login_required
+from django.forms.fields import DateTimeField
+from django.http import JsonResponse
+from django.urls import reverse
+from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
+
+from ..models import Building, Room, Reservation
 
 
 @login_required

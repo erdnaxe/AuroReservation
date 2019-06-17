@@ -1,13 +1,13 @@
 # -*- mode: python; coding: utf-8 -*-
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-from django.core.management.base import BaseCommand
-
 """
 Send one email per manager for pending reservation
 
 This management command should be called daily by a cron.
 """
+
+from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):

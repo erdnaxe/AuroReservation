@@ -44,8 +44,10 @@ Ensuite si vous voulez aider à mettre plus rapidement cette fonctionnalité dan
 Les règles de contributions :
 
 -   **Le code est écrit et commenté en anglais** seulement afin de fournir une documentation auto-générée homogène.
+
 -   Chaque application doit être pensées le plus possible **DRY** (don't repeat yourself) et **KISS** (keep it simple stupid).
     Exemple : l'application `users` reprend le code de Django et ajoute juste un profil utilisateur.
+
 -   **Garder les applications indépendantes.**
     On doit pouvoir désactiver une app sans pour autant devoir modifier majoritairement le code.
 

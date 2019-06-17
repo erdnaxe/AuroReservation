@@ -43,15 +43,18 @@ class ReservationAdmin(VersionAdmin, admin.ModelAdmin):
     search_fields = ('in_charge__username', 'room__name',)
     autocomplete_fields = ('in_charge', 'room',)
 
-    def has_ownership(self, user, instance):
-        return user in instance.room.managers.all()
-
     def has_change_permission(self, request, obj=None):
-        if obj is not None and self.has_ownership(request.user, obj):
+        """
+        Override permission when user is a manager of the room
+        """
+        if obj is not None and request.user in obj.room.managers.all():
             return True
         return super().has_change_permission(request, obj)
 
     def has_delete_permission(self, request, obj=None):
-        if obj is not None and self.has_ownership(request.user, obj):
+        """
+        Override permission when user is a manager of the room
+        """
+        if obj is not None and request.user in obj.room.managers.all():
             return True
         return super().has_delete_permission(request, obj)
