@@ -6,14 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "==2.2.1"
-django-reversion = "==3.0.3"
-django-extensions = "==2.1.4"
+django = "==2.2.2"
+django-reversion = "==3.0.4"
+django-extensions = "==2.1.9"
 docutils = "==0.14"
 djangorestframework = ">=3.9.1"
 django-webpack-loader = "==0.6.0"
 gunicorn = "*"
 django-heroku = "*"
-
-[requires]
-python_version = "3.7"
