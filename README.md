@@ -43,10 +43,10 @@ Ensuite si vous voulez aider à mettre plus rapidement cette fonctionnalité dan
 
 Les règles de contributions :
 
-  * **Le code est écrit et commenté en anglais** seulement afin de fournir une documentation auto-générée homogène.
-  * Chaque application doit être pensées le plus possible **DRY** (don't repeat yourself) et **KISS** (keep it simple stupid).
+-   **Le code est écrit et commenté en anglais** seulement afin de fournir une documentation auto-générée homogène.
+-   Chaque application doit être pensées le plus possible **DRY** (don't repeat yourself) et **KISS** (keep it simple stupid).
     Exemple : l'application `users` reprend le code de Django et ajoute juste un profil utilisateur.
-  * **Garder les applications indépendantes.**
+-   **Garder les applications indépendantes.**
     On doit pouvoir désactiver une app sans pour autant devoir modifier majoritairement le code.
 
 Je vous conseille de vous référez au guide de contribution de Django.
@@ -64,21 +64,28 @@ Buster.
 
 Les paquets nécessaires sont :
 
-  * [python3-django](https://packages.debian.org/experimental/all/python3-django/download) (prendre pour le moment la version de `experimental`)
-  * python3-djangorestframework
-  * python3-django-reversion
-  * python3-django-webpack-loader
-  * python3-docutils
-  * yarn (vous pouvez le remplacer par npm qui est avec nodejs)
-  * nodejs
-  * gettext
+-   [python3-django](https://packages.debian.org/experimental/all/python3-django/download) (prendre pour le moment la version de `experimental`)
+-   python3-djangorestframework
+-   python3-django-reversion
+-   python3-django-webpack-loader
+-   python3-docutils
+-   yarn (vous pouvez le remplacer par npm qui est avec nodejs)
+-   nodejs
+-   gettext
 
 ## Crédits
 
- - [pa](https://gitlab.crans.org/pa) (structure du projet, traduction anglaise et motivation) ;
- - [lieunoir](https://gitlab.crans.org/lieunoir) (formulaires et motivation) ;
- - [erdnaxe](https://gitlab.crans.org/erdnaxe) (interface utilisateur) ;
- - [elkmaennchen](https://gitlab.crans.org/elkmaennchen) (traduction espagnole).
+-   [pa](https://gitlab.crans.org/pa) (structure du projet, traduction anglaise et motivation) ;
+-   [lieunoir](https://gitlab.crans.org/lieunoir) (formulaires et motivation) ;
+-   [erdnaxe](https://gitlab.crans.org/erdnaxe) (interface utilisateur) ;
+-   [elkmaennchen](https://gitlab.crans.org/elkmaennchen) (traduction espagnole).
+
+## Outils testés avec ce projet
+
+-   [RemarkLint](https://remark.js.org/) pour formatter le Markdown ;
+-   [Codacy](https://www.codacy.com/app/erdnaxe/AuroReservation) ;
+-   [TravisCI](https://travis-ci.com/erdnaxe/AuroReservation) ;
+-   [CoverAlls](https://coveralls.io/github/erdnaxe/AuroReservation?branch=master) ;
 
 ## Licence
 
