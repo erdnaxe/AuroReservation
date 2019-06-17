@@ -1,5 +1,6 @@
 # Booking Project
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/736e11a0602645ee89991b1bd373feb0)](https://app.codacy.com/app/erdnaxe/AuroReservation?utm_source=github.com&utm_medium=referral&utm_content=erdnaxe/AuroReservation&utm_campaign=Badge_Grade_Dashboard)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![Build Status](https://api.travis-ci.com/erdnaxe/AuroReservation.svg?branch=master)](https://travis-ci.com/erdnaxe/AuroReservation)
 [![Coverage Status](https://coveralls.io/repos/github/erdnaxe/AuroReservation/badge.svg?branch=master)](https://coveralls.io/github/erdnaxe/AuroReservation?branch=master)
