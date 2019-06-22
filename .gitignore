@@ -3,6 +3,7 @@ __pycache__/
 *.swp
 .\#*
 *\#
+.coverage
 
 # Copied static files
 static_files/

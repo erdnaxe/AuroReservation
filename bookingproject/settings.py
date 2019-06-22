@@ -12,9 +12,13 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import django_heroku
 
 from django.utils.translation import gettext_lazy as _
+
+if '/app' in os.environ['HOME']:
+    # Running on Heroku
+    import django_heroku
+    django_heroku.settings(locals())
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -157,7 +161,3 @@ REST_FRAMEWORK = {
                                 'PageNumberPagination',
     'PAGE_SIZE': 10
 }
-
-# Heroku configuration
-# You may comment this if you deploy this locally
-django_heroku.settings(locals())
