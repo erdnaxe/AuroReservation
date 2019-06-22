@@ -7,6 +7,9 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Tag(models.Model):
+    """
+    Rooms can be tagged
+    """
     name = models.CharField(
         verbose_name=_('name'),
         max_length=255,
@@ -21,6 +24,9 @@ class Tag(models.Model):
 
 
 class Building(models.Model):
+    """
+    Represent a physical Building to group rooms
+    """
     name = models.CharField(
         verbose_name=_('name'),
         max_length=255,
@@ -35,6 +41,9 @@ class Building(models.Model):
 
 
 class Room(models.Model):
+    """
+    Represent a room that an user can reserve
+    """
     name = models.CharField(
         verbose_name=_('name'),
         max_length=255,
@@ -74,6 +83,9 @@ class Room(models.Model):
 
 
 class Reservation(models.Model):
+    """
+    A reservation ticket
+    """
     start_time = models.DateTimeField(
         verbose_name=_('start time'),
     )

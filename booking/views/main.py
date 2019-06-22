@@ -38,7 +38,7 @@ class ReservationCreate(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         """
-        Assign user and validation state
+        Assign user and do not validate when creating
         """
         reservation = form.save(commit=False)
         reservation.in_charge = self.request.user
@@ -73,7 +73,7 @@ class ReservationUpdate(LoginRequiredMixin, UpdateView):
 
     def form_valid(self, form):
         """
-        Assign user and validation state
+        Assign user and validation state when updating
         """
         reservation = form.save(commit=False)
         reservation.in_charge = self.request.user

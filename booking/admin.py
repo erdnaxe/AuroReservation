@@ -45,16 +45,14 @@ class ReservationAdmin(VersionAdmin, admin.ModelAdmin):
 
     def has_change_permission(self, request, obj=None):
         """
-        Override permission when user is a manager of the room
+        Override change permission when user is a manager of the room
         """
-        if obj is not None and request.user in obj.room.managers.all():
-            return True
-        return super().has_change_permission(request, obj)
+        own = obj is not None and request.user in obj.room.managers.all()
+        return own or super().has_change_permission(request, obj)
 
     def has_delete_permission(self, request, obj=None):
         """
-        Override permission when user is a manager of the room
+        Override delete permission when user is a manager of the room
         """
-        if obj is not None and request.user in obj.room.managers.all():
-            return True
-        return super().has_delete_permission(request, obj)
+        own = obj is not None and request.user in obj.room.managers.all()
+        return own or super().has_delete_permission(request, obj)
